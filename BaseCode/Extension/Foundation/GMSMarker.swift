@@ -6,16 +6,16 @@
 //  Copyright © 2020 Ferhan Akkan. All rights reserved.
 //
 
-import GoogleMaps
-
-extension GMSMarker {
-    var id: Int {
-        set(id) {
-            self.userData = id
-        }
-
-        get {
-           return self.userData as! Int
-       }
-   }
-}
+//import GoogleMaps
+//
+//extension GMSMarker {
+//    var id: Int {
+//        set(id) {
+//            self.userData = id
+//        }
+//
+//        get {
+//           return self.userData as! Int
+//       }
+//   }
+//}

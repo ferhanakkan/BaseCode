@@ -19,10 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
 //        AppManager.shared.setReachability()
-        firebase(application)
+//        firebase(application)
         setKeyboard()
         autoLogIn()
-        setLocalePushNotification()
+//        setLocalePushNotification()
         
         if #available(iOS 12.0, *) {
             self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -43,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func selectRoot() {
+        window?.rootViewController = ExampleViewController()
 //        if let rememberMe = UserDefaults.standard.value(forKey: "rememberMe") as? Bool {
 //            if !rememberMe {
 //                UserDefaults.standard.setValue(nil, forKey: "profileImage")
