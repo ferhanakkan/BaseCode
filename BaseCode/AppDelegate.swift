@@ -24,7 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         autoLogIn()
 //        setLocalePushNotification()
         
-        if #available(iOS 12.0, *) {
+        if #available(iOS 13.0, *) { }
+        else {
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.selectRoot()
             self.window?.makeKeyAndVisible()

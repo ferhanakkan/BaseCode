@@ -16,10 +16,25 @@ class ExampleViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .orange
         
-        service.getData().done { (response) in
-            print("ferhan sonuc \(response[0])")
+//        service.getData().done { (response) in
+//            print("ferhan sonuc \(response[0])")
+//        }.catch { (err) in
+//            print("error test")
+//        }
+        
+        service.postData().done { (res) in
+            print("post resfer \(res)")
         }.catch { (err) in
-            print("error test")
+            print("post resfer catch \(err)")
         }
+        
+//        firstly {
+//            service.getData()
+//        }.then { [unowned self] res in
+//            self.service.postData()
+//        }.done { (test) in
+//            print(test)
+//        }
+        
     }
 }
