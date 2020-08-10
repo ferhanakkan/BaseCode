@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360326D324E0A46600FF3DCB /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360326D224E0A46600FF3DCB /* UILabel.swift */; };
+		360326D524E0B53300FF3DCB /* UITapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360326D424E0B53200FF3DCB /* UITapGestureRecognizer.swift */; };
 		3605E3AB24D2AEC3001CB361 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E3AA24D2AEC3001CB361 /* AppDelegate.swift */; };
 		3605E3AD24D2AEC3001CB361 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E3AC24D2AEC3001CB361 /* SceneDelegate.swift */; };
 		3605E3B724D2AEC5001CB361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3605E3B524D2AEC5001CB361 /* LaunchScreen.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		360326D224E0A46600FF3DCB /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		360326D424E0B53200FF3DCB /* UITapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITapGestureRecognizer.swift; sourceTree = "<group>"; };
 		3605E3A724D2AEC3001CB361 /* BaseCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3605E3AA24D2AEC3001CB361 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3605E3AC24D2AEC3001CB361 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 				3627EBFA24D2D983008D76DB /* UIViewController.swift */,
 				3627EBFB24D2D983008D76DB /* UIImageView.swift */,
 				3627EBFC24D2D983008D76DB /* UIApplication.swift */,
+				360326D224E0A46600FF3DCB /* UILabel.swift */,
+				360326D424E0B53200FF3DCB /* UITapGestureRecognizer.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -381,7 +387,9 @@
 				3627EC0124D2D983008D76DB /* UIDate.swift in Sources */,
 				3627EC0824D2D983008D76DB /* Array.swift in Sources */,
 				36768D1824DC492600112893 /* Constants.swift in Sources */,
+				360326D324E0A46600FF3DCB /* UILabel.swift in Sources */,
 				3627EC0224D2D983008D76DB /* UIColor.swift in Sources */,
+				360326D524E0B53300FF3DCB /* UITapGestureRecognizer.swift in Sources */,
 				36768D1E24DC6DB200112893 /* ExampleService.swift in Sources */,
 				3627EC0324D2D983008D76DB /* UITextfield.swift in Sources */,
 				3627EC0724D2D983008D76DB /* UIApplication.swift in Sources */,

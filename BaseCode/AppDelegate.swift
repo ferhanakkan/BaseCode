@@ -9,7 +9,6 @@ import UIKit
 import IQKeyboardManagerSwift
 import Firebase
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,11 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        AppManager.shared.setReachability()
-//        firebase(application)
+        AppManager.shared.setReachability()
+        firebase(application)
         setKeyboard()
         autoLogIn()
 //        setLocalePushNotification()
+        
         
         if #available(iOS 13.0, *) { }
         else {
@@ -30,11 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.selectRoot()
             self.window?.makeKeyAndVisible()
         }
-            
         return true
     }
     
-    func applicationDidBecomeActive(_ application: UIApplication) {        UIApplication.shared.applicationIconBadgeNumber = 0
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        UIApplication.shared.applicationIconBadgeNumber = 0
     }
 
 

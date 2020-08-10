@@ -15,7 +15,6 @@ target 'BaseCode' do
    pod 'Firebase/Firestore'
    pod 'Firebase/Storage'
    pod 'Firebase/Messaging'
-   pod 'Firebase'
    pod 'Firebase/InAppMessaging'
    pod 'Fabric', '~> 1.10.2'
    pod 'Firebase/Crashlytics'
@@ -25,3 +24,4 @@ target 'BaseCode' do
    pod 'RxCocoa', '~> 5'
 
 end
+

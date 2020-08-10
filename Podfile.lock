@@ -222,8 +222,6 @@ PODS:
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
   - Fabric (1.10.2)
-  - Firebase (6.29.0):
-    - Firebase/Core (= 6.29.0)
   - Firebase/Analytics (6.29.0):
     - Firebase/Core
   - Firebase/Auth (6.29.0):
@@ -410,7 +408,6 @@ DEPENDENCIES:
   - AuthTextField
   - BEMCheckBox
   - Fabric (~> 1.10.2)
-  - Firebase
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
@@ -508,6 +505,6 @@ SPEC CHECKSUMS:
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 59d825e22320fd61fd5f273aa73d8586d132d31c
+PODFILE CHECKSUM: 429ee31b2319bc08dc9d824e2122358ce0958d6d
 
 COCOAPODS: 1.9.3

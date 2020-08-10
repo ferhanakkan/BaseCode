@@ -7,14 +7,34 @@
 
 import UIKit
 import PromiseKit
+import SnapKit
 
 class ExampleViewController: UIViewController {
     
     let service = ExampleService()
+    let label = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .orange
+        
+        label.numberOfLines = 0
+        label.text = "murat gelin damindan atlayamadim murat gelin damindan atlayamadim ben o guzel ferhan yare hoplayamadim"
+        label.underlineMyText(rangeArray: ["gelin","ben", "hoplayamadim"], underlinedFont: UIFont.boldSystemFont(ofSize: 20))
+        label.lineBreakMode = .byWordWrapping
+        label.isUserInteractionEnabled = true
+        
+        let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(tappedOnLabel(_:)))
+        tapGesture.numberOfTouchesRequired = 1
+        label.addGestureRecognizer(tapGesture)
+        
+        self.view.addSubview(label)
+        
+        label.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.leading.equalToSuperview().offset(10)
+            make.trailing.equalToSuperview().inset(10)
+        }
         
 //        service.getData().done { (response) in
 //            print("ferhan sonuc \(response[0])")
@@ -36,5 +56,13 @@ class ExampleViewController: UIViewController {
 //            print(test)
 //        }
         
+    }
+    
+    @objc func tappedOnLabel(_ gesture: UITapGestureRecognizer) {
+        guard let text = label.text else { return }
+        let ferhan = (text as NSString).range(of: "ferhan")
+        if gesture.didTapAttributedTextInLabel(label: self.label, inRange: ferhan) {
+            print("ferhan")
+        }
     }
 }
