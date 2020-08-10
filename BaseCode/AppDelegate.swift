@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
+        UserDefaults.standard.setValue(0, forKey: Constants.Badge.badgeNumber)
         UIApplication.shared.applicationIconBadgeNumber = 0
     }
 

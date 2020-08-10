@@ -379,6 +379,9 @@ PODS:
     - nanopb/encode (= 1.30905.0)
   - nanopb/decode (1.30905.0)
   - nanopb/encode (1.30905.0)
+  - NVActivityIndicatorView (5.0.0):
+    - NVActivityIndicatorView/Base (= 5.0.0)
+  - NVActivityIndicatorView/Base (5.0.0)
   - PromiseKit (6.13.1):
     - PromiseKit/CorePromise (= 6.13.1)
     - PromiseKit/Foundation (= 6.13.1)
@@ -418,6 +421,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - IQKeyboardManagerSwift (= 6.5.0)
   - Kingfisher (= 5.8.1)
+  - NVActivityIndicatorView
   - PromiseKit (~> 6.8)
   - RealmSwift
   - RxCocoa (~> 5)
@@ -455,6 +459,7 @@ SPEC REPOS:
     - Kingfisher
     - leveldb-library
     - nanopb
+    - NVActivityIndicatorView
     - PromiseKit
     - PromisesObjC
     - Protobuf
@@ -495,6 +500,7 @@ SPEC CHECKSUMS:
   Kingfisher: de969e451c81ca6c07a454bc36fea84b8b08c3c7
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
+  NVActivityIndicatorView: f109ed069924ac1b4adbc1ae9cfaeac0be1d6c2c
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   Protobuf: 2793fcd0622a00b546c60e7cbbcc493e043e9bb9
@@ -505,6 +511,6 @@ SPEC CHECKSUMS:
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 429ee31b2319bc08dc9d824e2122358ce0958d6d
+PODFILE CHECKSUM: 6ed8d680eac9e6b84f1f6d0050ae10004f07b51a
 
 COCOAPODS: 1.9.3

@@ -53,6 +53,9 @@ extension AppDelegate {
       if let messageID = userInfo[gcmMessageIDKey] {
         print("Message ID: \(messageID)")
       }
+        
+        let currentBadge = UserDefaults.standard.value(forKey: Constants.Badge.badgeNumber) as!Int
+        UIApplication.shared.applicationIconBadgeNumber = currentBadge + 1
 
       // Print full message.
       print(userInfo)

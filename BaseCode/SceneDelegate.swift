@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
+        UserDefaults.standard.setValue(0, forKey: Constants.Badge.badgeNumber)
         UIApplication.shared.applicationIconBadgeNumber = 0
     }
 

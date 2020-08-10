@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIImageView {
+    
     func makeRoundWithBorder(borderColor: UIColor, borderWidth: Float, cornerRadius:Float) {
         layer.borderWidth = CGFloat(borderWidth)
         layer.borderColor = borderColor.cgColor
@@ -23,8 +24,5 @@ extension UIImageView {
         animationDuration = 1.0
         animationRepeatCount = 1
         startAnimating()
-        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
-            self.isHidden = true
-        }
     }
 }

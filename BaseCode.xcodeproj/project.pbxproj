@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		360326D324E0A46600FF3DCB /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360326D224E0A46600FF3DCB /* UILabel.swift */; };
 		360326D524E0B53300FF3DCB /* UITapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360326D424E0B53200FF3DCB /* UITapGestureRecognizer.swift */; };
+		360326D724E18DB400FF3DCB /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360326D624E18DB400FF3DCB /* UIFont.swift */; };
+		360326D924E18EAD00FF3DCB /* WorkSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 360326D824E18EAD00FF3DCB /* WorkSans-SemiBold.otf */; };
+		360326DD24E19F5600FF3DCB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360326DC24E19F5600FF3DCB /* LoadingView.swift */; };
 		3605E3AB24D2AEC3001CB361 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E3AA24D2AEC3001CB361 /* AppDelegate.swift */; };
 		3605E3AD24D2AEC3001CB361 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E3AC24D2AEC3001CB361 /* SceneDelegate.swift */; };
 		3605E3B724D2AEC5001CB361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3605E3B524D2AEC5001CB361 /* LaunchScreen.storyboard */; };
@@ -38,6 +41,9 @@
 /* Begin PBXFileReference section */
 		360326D224E0A46600FF3DCB /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		360326D424E0B53200FF3DCB /* UITapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITapGestureRecognizer.swift; sourceTree = "<group>"; };
+		360326D624E18DB400FF3DCB /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		360326D824E18EAD00FF3DCB /* WorkSans-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-SemiBold.otf"; sourceTree = "<group>"; };
+		360326DC24E19F5600FF3DCB /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		3605E3A724D2AEC3001CB361 /* BaseCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3605E3AA24D2AEC3001CB361 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3605E3AC24D2AEC3001CB361 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +94,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		360326DA24E19B9000FF3DCB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				360326D824E18EAD00FF3DCB /* WorkSans-SemiBold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		360326DB24E19F3A00FF3DCB /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				360326DC24E19F5600FF3DCB /* LoadingView.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
 		3605E39E24D2AEC3001CB361 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +131,7 @@
 		3605E3A924D2AEC3001CB361 /* BaseCode */ = {
 			isa = PBXGroup;
 			children = (
+				360326DB24E19F3A00FF3DCB /* Custom Views */,
 				36768D1F24DC725B00112893 /* Scene */,
 				36768D1C24DC6DA500112893 /* Service */,
 				36768D1924DC4AF500112893 /* CoreService */,
@@ -162,6 +185,7 @@
 				3627EBFC24D2D983008D76DB /* UIApplication.swift */,
 				360326D224E0A46600FF3DCB /* UILabel.swift */,
 				360326D424E0B53200FF3DCB /* UITapGestureRecognizer.swift */,
+				360326D624E18DB400FF3DCB /* UIFont.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -178,6 +202,7 @@
 		3627EC0A24D2EA7C008D76DB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				360326DA24E19B9000FF3DCB /* Fonts */,
 				36768D1624DC491500112893 /* Constants */,
 				3627EC0C24D2EAB7008D76DB /* Assets */,
 				3627EC0B24D2EAAC008D76DB /* PList */,
@@ -304,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360326D924E18EAD00FF3DCB /* WorkSans-SemiBold.otf in Resources */,
 				3605E3B724D2AEC5001CB361 /* LaunchScreen.storyboard in Resources */,
 				3627EC1024D2EAE1008D76DB /* Image.xcassets in Resources */,
 				3627EC1224D2EAF4008D76DB /* Icon.xcassets in Resources */,
@@ -383,6 +409,7 @@
 				3627EC0924D2D983008D76DB /* GMSMarker.swift in Sources */,
 				3627EC0624D2D983008D76DB /* UIImageView.swift in Sources */,
 				36768D2124DC726A00112893 /* ExampleViewController.swift in Sources */,
+				360326D724E18DB400FF3DCB /* UIFont.swift in Sources */,
 				3605E3AB24D2AEC3001CB361 /* AppDelegate.swift in Sources */,
 				3627EC0124D2D983008D76DB /* UIDate.swift in Sources */,
 				3627EC0824D2D983008D76DB /* Array.swift in Sources */,
@@ -398,6 +425,7 @@
 				3627EC0424D2D983008D76DB /* UIButton.swift in Sources */,
 				3627EBEF24D2D8D2008D76DB /* Reachability.swift in Sources */,
 				3605E3AD24D2AEC3001CB361 /* SceneDelegate.swift in Sources */,
+				360326DD24E19F5600FF3DCB /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

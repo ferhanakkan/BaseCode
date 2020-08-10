@@ -20,7 +20,7 @@ class ExampleViewController: UIViewController {
         
         label.numberOfLines = 0
         label.text = "murat gelin damindan atlayamadim murat gelin damindan atlayamadim ben o guzel ferhan yare hoplayamadim"
-        label.underlineMyText(rangeArray: ["gelin","ben", "hoplayamadim"], underlinedFont: UIFont.boldSystemFont(ofSize: 20))
+        label.underlineMyText(rangeArray: ["gelin","ben", "hoplayamadim"], underlinedFont: UIFont.worksansSemiBold(fontSize: 22))
         label.lineBreakMode = .byWordWrapping
         label.isUserInteractionEnabled = true
         
@@ -56,6 +56,12 @@ class ExampleViewController: UIViewController {
 //            print(test)
 //        }
         
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        LoadingView.show()
     }
     
     @objc func tappedOnLabel(_ gesture: UITapGestureRecognizer) {

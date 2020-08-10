@@ -52,7 +52,6 @@ extension UIView {
     }
     
     func makeRounded() {
-
         layer.borderWidth = 2
         layer.masksToBounds = false
         layer.borderColor = UIColor.gray.cgColor

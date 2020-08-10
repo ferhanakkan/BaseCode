@@ -17,6 +17,7 @@ target 'BaseCode' do
    pod 'Firebase/Messaging'
    pod 'Firebase/InAppMessaging'
    pod 'Fabric', '~> 1.10.2'
+   pod 'NVActivityIndicatorView'
    pod 'Firebase/Crashlytics'
    pod 'BEMCheckBox'
    pod 'AuthTextField'

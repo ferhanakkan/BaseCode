@@ -13,9 +13,15 @@ struct Constants {
         static let retryButton = "Retry"
     }
     
+    struct Badge {
+        static let badgeNumber = "badge"
+    }
+    
     struct Api {
         static let token = "token"
     }
     
-    
+    struct Font {
+        static let wordsansSemibold = "WorkSans-SemiBold"
+    }
 }
