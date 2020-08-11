@@ -35,6 +35,13 @@
 		36768D1B24DC4B0900112893 /* CoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36768D1A24DC4B0900112893 /* CoreService.swift */; };
 		36768D1E24DC6DB200112893 /* ExampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36768D1D24DC6DB200112893 /* ExampleService.swift */; };
 		36768D2124DC726A00112893 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36768D2024DC726A00112893 /* ExampleViewController.swift */; };
+		3676A7E524E28D1A0055E39A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676A7DC24E28D1A0055E39A /* AuthViewController.swift */; };
+		3676A7E624E28D1A0055E39A /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676A7DD24E28D1A0055E39A /* AuthViewModel.swift */; };
+		3676A7E724E28D1A0055E39A /* LogInCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676A7DF24E28D1A0055E39A /* LogInCollectionViewCell.swift */; };
+		3676A7E824E28D1A0055E39A /* CellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676A7E024E28D1A0055E39A /* CellProtocol.swift */; };
+		3676A7E924E28D1A0055E39A /* ForgotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676A7E124E28D1A0055E39A /* ForgotCollectionViewCell.swift */; };
+		3676A7EA24E28D1A0055E39A /* RegisterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676A7E224E28D1A0055E39A /* RegisterCollectionViewCell.swift */; };
+		3676A7EB24E28D1A0055E39A /* UserAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676A7E424E28D1A0055E39A /* UserAgreementViewController.swift */; };
 		9289D783B792FC7F9CE386C9 /* Pods_BaseCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC3AA14188EBCC9169A3DD1 /* Pods_BaseCode.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +76,13 @@
 		36768D1A24DC4B0900112893 /* CoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreService.swift; sourceTree = "<group>"; };
 		36768D1D24DC6DB200112893 /* ExampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleService.swift; sourceTree = "<group>"; };
 		36768D2024DC726A00112893 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		3676A7DC24E28D1A0055E39A /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		3676A7DD24E28D1A0055E39A /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		3676A7DF24E28D1A0055E39A /* LogInCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInCollectionViewCell.swift; sourceTree = "<group>"; };
+		3676A7E024E28D1A0055E39A /* CellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellProtocol.swift; sourceTree = "<group>"; };
+		3676A7E124E28D1A0055E39A /* ForgotCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotCollectionViewCell.swift; sourceTree = "<group>"; };
+		3676A7E224E28D1A0055E39A /* RegisterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterCollectionViewCell.swift; sourceTree = "<group>"; };
+		3676A7E424E28D1A0055E39A /* UserAgreementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAgreementViewController.swift; sourceTree = "<group>"; };
 		E0852A22FA323DDDE88566FC /* Pods-BaseCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseCode.debug.xcconfig"; path = "Target Support Files/Pods-BaseCode/Pods-BaseCode.debug.xcconfig"; sourceTree = "<group>"; };
 		E8ADC355975DB18BC4723C7A /* Pods-BaseCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseCode.release.xcconfig"; path = "Target Support Files/Pods-BaseCode/Pods-BaseCode.release.xcconfig"; sourceTree = "<group>"; };
 		ECC3AA14188EBCC9169A3DD1 /* Pods_BaseCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,9 +269,40 @@
 		36768D1F24DC725B00112893 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				3676A7DB24E28D1A0055E39A /* Auth */,
 				36768D2024DC726A00112893 /* ExampleViewController.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		3676A7DB24E28D1A0055E39A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3676A7DC24E28D1A0055E39A /* AuthViewController.swift */,
+				3676A7DD24E28D1A0055E39A /* AuthViewModel.swift */,
+				3676A7DE24E28D1A0055E39A /* CollectionView Cell's */,
+				3676A7E324E28D1A0055E39A /* User Agreement */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		3676A7DE24E28D1A0055E39A /* CollectionView Cell's */ = {
+			isa = PBXGroup;
+			children = (
+				3676A7E024E28D1A0055E39A /* CellProtocol.swift */,
+				3676A7DF24E28D1A0055E39A /* LogInCollectionViewCell.swift */,
+				3676A7E124E28D1A0055E39A /* ForgotCollectionViewCell.swift */,
+				3676A7E224E28D1A0055E39A /* RegisterCollectionViewCell.swift */,
+			);
+			path = "CollectionView Cell's";
+			sourceTree = "<group>";
+		};
+		3676A7E324E28D1A0055E39A /* User Agreement */ = {
+			isa = PBXGroup;
+			children = (
+				3676A7E424E28D1A0055E39A /* UserAgreementViewController.swift */,
+			);
+			path = "User Agreement";
 			sourceTree = "<group>";
 		};
 		9538C15B09E7D8D5DFE77376 /* Pods */ = {
@@ -403,15 +448,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3676A7EB24E28D1A0055E39A /* UserAgreementViewController.swift in Sources */,
 				36768D1B24DC4B0900112893 /* CoreService.swift in Sources */,
+				3676A7E824E28D1A0055E39A /* CellProtocol.swift in Sources */,
 				3605E3C124D2D262001CB361 /* AppDelegatePushNotification.swift in Sources */,
 				3627EC0524D2D983008D76DB /* UIViewController.swift in Sources */,
 				3627EC0924D2D983008D76DB /* GMSMarker.swift in Sources */,
+				3676A7E524E28D1A0055E39A /* AuthViewController.swift in Sources */,
 				3627EC0624D2D983008D76DB /* UIImageView.swift in Sources */,
 				36768D2124DC726A00112893 /* ExampleViewController.swift in Sources */,
 				360326D724E18DB400FF3DCB /* UIFont.swift in Sources */,
 				3605E3AB24D2AEC3001CB361 /* AppDelegate.swift in Sources */,
 				3627EC0124D2D983008D76DB /* UIDate.swift in Sources */,
+				3676A7EA24E28D1A0055E39A /* RegisterCollectionViewCell.swift in Sources */,
 				3627EC0824D2D983008D76DB /* Array.swift in Sources */,
 				36768D1824DC492600112893 /* Constants.swift in Sources */,
 				360326D324E0A46600FF3DCB /* UILabel.swift in Sources */,
@@ -422,8 +471,11 @@
 				3627EC0724D2D983008D76DB /* UIApplication.swift in Sources */,
 				3627EC0024D2D983008D76DB /* UIView.swift in Sources */,
 				3627EBF224D2D8F9008D76DB /* AppManager.swift in Sources */,
+				3676A7E724E28D1A0055E39A /* LogInCollectionViewCell.swift in Sources */,
+				3676A7E624E28D1A0055E39A /* AuthViewModel.swift in Sources */,
 				3627EC0424D2D983008D76DB /* UIButton.swift in Sources */,
 				3627EBEF24D2D8D2008D76DB /* Reachability.swift in Sources */,
+				3676A7E924E28D1A0055E39A /* ForgotCollectionViewCell.swift in Sources */,
 				3605E3AD24D2AEC3001CB361 /* SceneDelegate.swift in Sources */,
 				360326DD24E19F5600FF3DCB /* LoadingView.swift in Sources */,
 			);

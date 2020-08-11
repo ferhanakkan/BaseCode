@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func selectRoot() {
-        window?.rootViewController = ExampleViewController()
+        window?.rootViewController = AuthViewController()
 //        if let rememberMe = UserDefaults.standard.value(forKey: "rememberMe") as? Bool {
 //            if !rememberMe {
 //                UserDefaults.standard.setValue(nil, forKey: "profileImage")

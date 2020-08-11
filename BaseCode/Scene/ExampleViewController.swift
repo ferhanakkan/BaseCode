@@ -8,6 +8,7 @@
 import UIKit
 import PromiseKit
 import SnapKit
+import Kingfisher
 
 class ExampleViewController: UIViewController {
     
@@ -55,7 +56,7 @@ class ExampleViewController: UIViewController {
 //        }.done { (test) in
 //            print(test)
 //        }
-        
+
         
     }
     
