@@ -21,7 +21,7 @@ class ExampleViewController: UIViewController {
         
         label.numberOfLines = 0
         label.text = "murat gelin damindan atlayamadim murat gelin damindan atlayamadim ben o guzel ferhan yare hoplayamadim"
-        label.underlineMyText(rangeArray: ["gelin","ben", "hoplayamadim"], underlinedFont: UIFont.worksansSemiBold(fontSize: 22))
+        label.underlineMyText(rangeArray: ["gelin","ben", "hoplayamadim"], underlinedFont: UIFont.worksansSemiBold(fontSize: 17), underlinedColor: .red)
         label.lineBreakMode = .byWordWrapping
         label.isUserInteractionEnabled = true
         

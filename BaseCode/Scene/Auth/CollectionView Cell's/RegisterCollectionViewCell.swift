@@ -10,22 +10,22 @@ import UIKit
 import SnapKit
 import Firebase
 import BEMCheckBox
+import AuthTextField
 
 class RegisterColletionViewCell: UICollectionViewCell {
     
     let mainView = UIView()
-    let emailInput = UITextField()
-    let passwordInput = UITextField()
-    let eyeButton = UIButton()
-    let usernameInput = UITextField()
+    let emailInput = AuthField()
+    let passwordInput = AuthField()
+    let usernameInput = AuthField()
     let userAgreementLabel = UILabel()
     let userAgreementCheckBox = BEMCheckBox()
     let rememberLabel = UILabel()
     let checkBox = BEMCheckBox()
-    let registerButton = UIButton()
+    let registerButton = UIButton(type: .system)
     let bottomSubView = UIView()
     let bottomLabel = UILabel()
-    let logInButton = UIButton()
+    let logInButton = UIButton(type: .system)
     
     var delegate: CollectionViewIndexSelector?
     
@@ -34,7 +34,6 @@ class RegisterColletionViewCell: UICollectionViewCell {
         setMainView()
         setEmailInput()
         setPasswordInput()
-        setEye()
         setUsernameInput()
         setuserAgremmentLabel()
         setUserAgrementCheckBox()
@@ -51,7 +50,7 @@ class RegisterColletionViewCell: UICollectionViewCell {
     }
 }
 
-    //MARK: - Setup UI
+//MARK: - Setup UI
 extension RegisterColletionViewCell {
     
     private func setMainView() {
@@ -67,50 +66,35 @@ extension RegisterColletionViewCell {
     
     private func setEmailInput() {
         mainView.addSubview(emailInput)
+        emailInput.inputType = .email
         emailInput.snp.makeConstraints { (make) in
             make.height.equalTo(40)
             make.top.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
         }
-        emailInput.placeholder = "E-mail"
-        emailInput.borderStyle = .roundedRect
     }
     
     private func setPasswordInput() {
         mainView.addSubview(passwordInput)
+        passwordInput.inputType = .password
         passwordInput.snp.makeConstraints { (make) in
             make.height.equalTo(40)
             make.top.equalTo(emailInput.snp.bottom).offset(20)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
         }
-        passwordInput.placeholder = "Password"
-        passwordInput.isSelected = true
-        passwordInput.borderStyle = .roundedRect
-        passwordInput.isSecureTextEntry = true
     }
     
-    private func setEye() {
-        mainView.addSubview(eyeButton)
-        eyeButton.snp.makeConstraints { (make) in
-            make.height.width.equalTo(30)
-            make.centerY.equalTo(passwordInput.snp.centerY)
-            make.trailing.equalToSuperview().inset(30)
-        }
-        eyeButton.setImage(UIImage(named: "eyeHidden"), for: .normal)
-        eyeButton.addTarget(self, action: #selector(eyeButtonPressed), for: .touchUpInside)
-    }
     
     private func setUsernameInput() {
         mainView.addSubview(usernameInput)
+        usernameInput.inputType = .username
         usernameInput.snp.makeConstraints { (make) in
             make.height.equalTo(40)
             make.top.equalTo(passwordInput.snp.bottom).offset(20)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
         }
-        usernameInput.placeholder = "Username"
-        usernameInput.borderStyle = .roundedRect
     }
     
     private func setuserAgremmentLabel() {
@@ -118,12 +102,16 @@ extension RegisterColletionViewCell {
         userAgreementLabel.snp.makeConstraints { (make) in
             make.top.equalTo(usernameInput.snp.bottom).offset(20)
             make.leading.equalToSuperview().offset(20)
-            make.height.equalTo(40)
         }
-        userAgreementLabel.text = "User Agreements"
-        userAgreementLabel.textColor = .systemBlue
-        let gest = UITapGestureRecognizer(target: self, action: #selector(userAgreementPressed))
-        userAgreementLabel.addGestureRecognizer(gest)
+        userAgreementLabel.numberOfLines = 0
+        userAgreementLabel.text = "Lets look our User Agreements ."
+        userAgreementLabel.underlineMyText(rangeArray: ["User Agreements"], underlinedFont: .boldSystemFont(ofSize: 16), underlinedColor: .red)
+        userAgreementLabel.lineBreakMode = .byWordWrapping
+        userAgreementLabel.isUserInteractionEnabled = true
+        
+        let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(tappedOnLabel(_:)))
+        tapGesture.numberOfTouchesRequired = 1
+        userAgreementLabel.addGestureRecognizer(tapGesture)
         userAgreementLabel.isUserInteractionEnabled = true
     }
     
@@ -133,6 +121,7 @@ extension RegisterColletionViewCell {
             make.height.width.equalTo(15)
             make.centerY.equalTo(userAgreementLabel)
             make.leading.equalTo(userAgreementLabel.snp.trailing).offset(10)
+            make.trailing.lessThanOrEqualTo(mainView.snp.trailing).inset(30)
         }
         userAgreementCheckBox.onTintColor = .orange
         userAgreementCheckBox.onCheckColor = .orange
@@ -169,6 +158,7 @@ extension RegisterColletionViewCell {
         }
         registerButton.backgroundColor = .gray
         registerButton.setTitleColor(.white, for: .normal)
+        registerButton.cornerRadius = 15
         registerButton.setTitle("Register", for: .normal)
         registerButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
         registerButton.addTarget(self, action: #selector(registerButtonPressed), for: .touchUpInside)
@@ -213,9 +203,13 @@ extension RegisterColletionViewCell {
 
 extension RegisterColletionViewCell {
     
-    @objc private func userAgreementPressed() {
-       let vc = UserAgreementViewController()
-        UIApplication.getPresentedViewController()!.present(vc, animated: true)
+    @objc func tappedOnLabel(_ gesture: UITapGestureRecognizer) {
+        guard let text = userAgreementLabel.text else { return }
+        let yare = (text as NSString).range(of: "User Agreements")
+        if gesture.didTapAttributedTextInLabel(label: self.userAgreementLabel, inRange: yare) {
+            let vc = UserAgreementViewController()
+            UIApplication.getPresentedViewController()!.present(vc, animated: true)
+        }
     }
     
     @objc private func logInPressed() {
@@ -223,13 +217,12 @@ extension RegisterColletionViewCell {
     }
     
     @objc private func registerButtonPressed() {
-  
-    }
-    
-    @objc private func eyeButtonPressed() {
-        passwordInput.isSecureTextEntry = !passwordInput.isSecureTextEntry
-        DispatchQueue.main.async {
-            self.setEyeImage()
+        let usernameStatus = usernameInput.checkField()
+        let passwordStatus = passwordInput.checkField()
+        let emailStatus = emailInput.checkField()
+        
+        if emailStatus && passwordStatus && usernameStatus {
+            
         }
     }
     
@@ -237,15 +230,7 @@ extension RegisterColletionViewCell {
         if checkBox.on {
             UserDefaults.standard.setValue(true, forKey: "rememberMe")
         } else {
-           UserDefaults.standard.setValue(false, forKey: "rememberMe")
-        }
-    }
-    
-    private func setEyeImage() {
-        if passwordInput.isSecureTextEntry {
-            eyeButton.setImage(UIImage(named: "eyeHidden"), for: .normal)
-        } else {
-            eyeButton.setImage(UIImage(named: "eye"), for: .normal)
+            UserDefaults.standard.setValue(false, forKey: "rememberMe")
         }
     }
 }

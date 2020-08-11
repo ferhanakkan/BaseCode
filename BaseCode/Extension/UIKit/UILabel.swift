@@ -11,7 +11,7 @@ extension UILabel {
     
     
     //Multilin label underLine function
-    func underlineMyText(rangeArray: [String], underlinedFont: UIFont) {
+    func underlineMyText(rangeArray: [String], underlinedFont: UIFont, underlinedColor: UIColor) {
         if let textString = self.text {
 
             let str = NSString(string: textString)
@@ -21,7 +21,7 @@ extension UILabel {
                 let selectedRange = str.range(of: range)
                 
                 attributedString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: selectedRange)
-                attributedString.addAttributes([NSAttributedString.Key.font: underlinedFont as Any], range: selectedRange)
+                attributedString.addAttributes([NSAttributedString.Key.font: underlinedFont as Any, NSAttributedString.Key.foregroundColor: underlinedColor], range: selectedRange)
             }
             
             attributedText = attributedString

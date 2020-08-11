@@ -9,15 +9,16 @@
 import UIKit
 import SnapKit
 import Firebase
+import AuthTextField
 
 class ForgotColletionViewCell: UICollectionViewCell {
     
     let mainView = UIView()
     let title = UILabel()
-    let mailInput = UITextField()
-    let resetButton = UIButton()
+    let mailInput = AuthField()
+    let resetButton = UIButton(type: .system)
     let bottomLabel = UILabel()
-    let logInButton = UIButton()
+    let logInButton = UIButton(type: .system)
     
     var delegate: CollectionViewIndexSelector?
     
@@ -64,23 +65,13 @@ extension ForgotColletionViewCell {
     
     private func setMailInput() {
         mainView.addSubview(mailInput)
+        mailInput.inputType = .email
         mailInput.snp.makeConstraints { (make) in
             make.top.equalTo(title.snp.bottom).offset(20)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
             make.height.equalTo(40)
         }
-        
-        mailInput.borderStyle = .roundedRect
-        mailInput.backgroundColor = .white
-        mailInput.updatePlaceHolder("E-mail", color: UIColor.gray.withAlphaComponent(0.45))
-        if #available(iOS 13.0, *) {
-            mailInput.layer.borderColor = UIColor.gray.resolvedColor(with: mailInput.traitCollection).cgColor
-        }
-//        mailInput.layer.cornerRadius = 8.0
-//        mailInput.layer.masksToBounds = true
-//        mailInput.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.45).cgColor
-//        mailInput.layer.borderWidth = 1.0
     }
     
     private func setResetButton() {
@@ -92,6 +83,7 @@ extension ForgotColletionViewCell {
             make.height.equalTo(40)
         }
         resetButton.setTitle("Reset Password", for: .normal)
+        resetButton.cornerRadius = 15
         resetButton.setTitleColor(.white, for: .normal)
         resetButton.backgroundColor = .gray
         resetButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
@@ -130,7 +122,10 @@ extension ForgotColletionViewCell {
 
 extension ForgotColletionViewCell {
     @objc func resetButtonPressed() {
-
+        let mailStatus = mailInput.checkField()
+        if mailStatus {
+            
+        }
     }
     
     @objc func logInButtonPressed() {

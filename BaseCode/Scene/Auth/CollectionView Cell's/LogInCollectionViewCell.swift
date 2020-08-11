@@ -10,20 +10,20 @@ import UIKit
 import SnapKit
 import Firebase
 import BEMCheckBox
+import AuthTextField
 
 class LogInColletionViewCell: UICollectionViewCell {
     
     let mainView = UIView()
-    let emailInput = UITextField()
-    let passwordInput = UITextField()
-    let eyeButton = UIButton()
+    let emailInput = AuthField()
+    let passwordInput = AuthField()
     let rememberLabel = UILabel()
     let checkBox = BEMCheckBox()
-    let resetPasswordButton = UIButton()
-    let logInButton = UIButton()
+    let resetPasswordButton = UIButton(type: .system)
+    let logInButton = UIButton(type: .system)
     let bottomSubView = UIView()
     let bottomLabel = UILabel()
-    let registerButton = UIButton()
+    let registerButton = UIButton(type: .system)
     
     var delegate: CollectionViewIndexSelector?
     
@@ -33,7 +33,6 @@ class LogInColletionViewCell: UICollectionViewCell {
         setMainView()
         setEmailInput()
         setPasswordInput()
-        setEye()
         setRememberLabel()
         setCheckBox()
         setResetPasswordButton()
@@ -64,39 +63,23 @@ extension LogInColletionViewCell {
     
     private func setEmailInput() {
         mainView.addSubview(emailInput)
+        emailInput.inputType = .email
         emailInput.snp.makeConstraints { (make) in
             make.height.equalTo(40)
             make.top.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
         }
-        emailInput.placeholder = "E-mail"
-        emailInput.keyboardType = .emailAddress
-        emailInput.borderStyle = .roundedRect
     }
     
     private func setPasswordInput() {
         mainView.addSubview(passwordInput)
+        passwordInput.inputType = .password
         passwordInput.snp.makeConstraints { (make) in
             make.height.equalTo(40)
             make.top.equalTo(emailInput.snp.bottom).offset(20)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
         }
-        passwordInput.placeholder = "Password"
-        passwordInput.isSecureTextEntry = true
-        passwordInput.borderStyle = .roundedRect
-        passwordInput.isSecureTextEntry = true
-    }
-    
-    private func setEye() {
-        mainView.addSubview(eyeButton)
-        eyeButton.snp.makeConstraints { (make) in
-            make.height.width.equalTo(30)
-            make.centerY.equalTo(passwordInput.snp.centerY)
-            make.trailing.equalToSuperview().inset(30)
-        }
-        eyeButton.setImage(UIImage(named: "eyeHidden"), for: .normal)
-        eyeButton.addTarget(self, action: #selector(eyeButtonPressed), for: .touchUpInside)
     }
     
     private func setRememberLabel() {
@@ -143,6 +126,7 @@ extension LogInColletionViewCell {
             make.height.equalTo(40)
         }
         logInButton.backgroundColor = .gray
+        logInButton.cornerRadius = 15
         logInButton.setTitleColor(.white, for: .normal)
         logInButton.setTitle("Log In", for: .normal)
         logInButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
@@ -189,14 +173,11 @@ extension LogInColletionViewCell {
 extension LogInColletionViewCell {
     
     @objc private func logInButtonPressed() {
-        rememberMeSetter()
-
-    }
-    
-    @objc private func eyeButtonPressed() {
-        passwordInput.isSecureTextEntry = !passwordInput.isSecureTextEntry
-        DispatchQueue.main.async {
-            self.setEyeImage()
+        let passwordStatus = passwordInput.checkField()
+        let emailStatus = emailInput.checkField()
+        
+        if emailStatus && passwordStatus {
+            
         }
     }
     
@@ -215,12 +196,5 @@ extension LogInColletionViewCell {
            UserDefaults.standard.setValue(false, forKey: "rememberMe")
         }
     }
-    
-    private func setEyeImage() {
-        if passwordInput.isSecureTextEntry {
-            eyeButton.setImage(UIImage(named: "eyeHidden"), for: .normal)
-        } else {
-            eyeButton.setImage(UIImage(named: "eye"), for: .normal)
-        }
-    }
+
 }
