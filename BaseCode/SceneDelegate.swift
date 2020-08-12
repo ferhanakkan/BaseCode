@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     private func selectRoot() {
 //            window?.rootViewController = Tabbar.createTabBarWithNavigationBar()
-        window?.rootViewController = AuthViewController()
+        window?.rootViewController = UINavigationController(rootViewController: ExampleViewController())
     }
 
 }

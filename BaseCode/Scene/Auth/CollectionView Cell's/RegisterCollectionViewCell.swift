@@ -104,7 +104,7 @@ extension RegisterColletionViewCell {
             make.leading.equalToSuperview().offset(20)
         }
         userAgreementLabel.numberOfLines = 0
-        userAgreementLabel.text = "Lets look our User Agreements ."
+        userAgreementLabel.text = "By creating an account, you accept our User Agreements ."
         userAgreementLabel.underlineMyText(rangeArray: ["User Agreements"], underlinedFont: .boldSystemFont(ofSize: 16), underlinedColor: .red)
         userAgreementLabel.lineBreakMode = .byWordWrapping
         userAgreementLabel.isUserInteractionEnabled = true

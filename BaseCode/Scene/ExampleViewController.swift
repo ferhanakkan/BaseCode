@@ -10,6 +10,7 @@ import PromiseKit
 import SnapKit
 import Kingfisher
 
+
 class ExampleViewController: UIViewController {
     
     let service = ExampleService()
@@ -60,9 +61,34 @@ class ExampleViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let leftBarButton = UIBarButtonItem()
+        let button = UIButton(type: .system)
+        button.setBackgroundImage(UIImage(named: "asd"), for: .normal)
+        button.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        button.addTarget(self, action: #selector(sidebarButtonPressed), for: .touchUpInside)
+        button.cornerRadius = 15
+        button.layer.borderWidth = 2
+        button.layer.masksToBounds = false
+        button.layer.borderColor = UIColor.orange.cgColor
+        button.clipsToBounds = true
+        button.translatesAutoresizingMaskIntoConstraints = false
+        leftBarButton.customView = button
+        navigationItem.leftBarButtonItem = leftBarButton
+    }
+    
+    @objc func sidebarButtonPressed() {
+        let sidebar = Sidebar()
+        sidebar.showAnimation()
+        
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        LoadingView.show()
+//        LoadingView.show()
     }
     
     @objc func tappedOnLabel(_ gesture: UITapGestureRecognizer) {

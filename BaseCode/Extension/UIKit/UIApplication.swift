@@ -19,4 +19,14 @@ extension UIApplication{
         
         return presentViewController
     }
+    
+    class func tryURL(urls: [String]) {
+        let application = UIApplication.shared
+        for url in urls {
+            if application.canOpenURL(URL(string: url)!) {
+                application.openURL(URL(string: url)!)
+                return
+            }
+        }
+    }
 }

@@ -24,4 +24,11 @@ struct Constants {
     struct Font {
         static let wordsansSemibold = "WorkSans-SemiBold"
     }
+    
+    struct TableViewCellNames {
+        struct Sidebar {
+            static let sidebarTitleCell = "SidebarTitleCell"
+            static let sidebarSubCell = "SidebarSubCell"
+        }
+    }
 }
