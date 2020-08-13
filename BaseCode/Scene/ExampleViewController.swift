@@ -21,9 +21,17 @@ class ExampleViewController: UIViewController {
         self.view.backgroundColor = .orange
         
         label.numberOfLines = 0
-        label.text = "Bu bir deneme yazisidir. test edilmektedir."
-        label.underlineMyText(rangeArray: ["deneme", "test"], underlinedFont: UIFont.worksansSemiBold(fontSize: 17), underlinedColor: .red)
-        label.lineBreakMode = .byWordWrapping
+        
+
+        
+        UserDefaults.setLanguage(language: .english)
+        label.text = "language".localized()
+        
+        
+        
+        
+//        label.text = "Bu bir deneme yazisidir. test edilmektedir. Son cumle bir iki"
+//        label.underlineMyText(rangeArray: ["deneme", "test"], underlinedFont: UIFont.worksansSemiBold(fontSize: 17), underlinedColor: .red)
         label.isUserInteractionEnabled = true
         
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(tappedOnLabel(_:)))
@@ -79,12 +87,11 @@ class ExampleViewController: UIViewController {
     @objc func sidebarButtonPressed() {
         let sidebar = Sidebar()
         sidebar.showAnimation()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        LoadingView.show()
+//        LoadingView.show()
     }
     
     @objc func tappedOnLabel(_ gesture: UITapGestureRecognizer) {

@@ -13,13 +13,12 @@ extension UITapGestureRecognizer {
 
 //    @objc func tappedOnLabel(_ gesture: UITapGestureRecognizer) {
 //        guard let text = label.text else { return }
-//        let yare = (text as NSString).range(of: "yare")
-//        if gesture.didTapAttributedTextInLabel(label: self.label, inRange: yare) {
-//            print("yar")
+//        let myText = (text as NSString).range(of: "myText")
+//        if gesture.didTapAttributedTextInLabel(label: self.label, inRange: myText) {
+//            print("myText pressed")
 //        }
 //    }
-//
-//    label.lineBreakMode = .byWordWrapping
+    
 //    label.isUserInteractionEnabled = true
 //
 //    let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(tappedOnLabel(_:)))
