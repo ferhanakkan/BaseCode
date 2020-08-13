@@ -34,6 +34,8 @@
 		36520C5B24E3E36A002F9539 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36520C5A24E3E36A002F9539 /* Sidebar.swift */; };
 		36520C5E24E3E576002F9539 /* SidebarTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36520C5D24E3E576002F9539 /* SidebarTitleCell.swift */; };
 		36520C6024E3E912002F9539 /* SidebarSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36520C5F24E3E912002F9539 /* SidebarSubCell.swift */; };
+		3673B36624E5749100D2F78D /* AnimatedSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3673B36524E5749100D2F78D /* AnimatedSplashViewController.swift */; };
+		3673B36A24E57B8300D2F78D /* logoGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3673B36924E57B8300D2F78D /* logoGif.gif */; };
 		36768D1824DC492600112893 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36768D1724DC492600112893 /* Constants.swift */; };
 		36768D1B24DC4B0900112893 /* CoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36768D1A24DC4B0900112893 /* CoreService.swift */; };
 		36768D1E24DC6DB200112893 /* ExampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36768D1D24DC6DB200112893 /* ExampleService.swift */; };
@@ -78,6 +80,8 @@
 		36520C5A24E3E36A002F9539 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		36520C5D24E3E576002F9539 /* SidebarTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarTitleCell.swift; sourceTree = "<group>"; };
 		36520C5F24E3E912002F9539 /* SidebarSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarSubCell.swift; sourceTree = "<group>"; };
+		3673B36524E5749100D2F78D /* AnimatedSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedSplashViewController.swift; sourceTree = "<group>"; };
+		3673B36924E57B8300D2F78D /* logoGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = logoGif.gif; sourceTree = "<group>"; };
 		36768D1724DC492600112893 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		36768D1A24DC4B0900112893 /* CoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreService.swift; sourceTree = "<group>"; };
 		36768D1D24DC6DB200112893 /* ExampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleService.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 		360326DB24E19F3A00FF3DCB /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				3673B36424E5747B00D2F78D /* Animated Splash Screen */,
 				36520C5924E3E355002F9539 /* Sidebar */,
 				36520C5824E3E34A002F9539 /* LoadingView */,
 			);
@@ -275,6 +280,15 @@
 			path = "Custom Cell's";
 			sourceTree = "<group>";
 		};
+		3673B36424E5747B00D2F78D /* Animated Splash Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3673B36924E57B8300D2F78D /* logoGif.gif */,
+				3673B36524E5749100D2F78D /* AnimatedSplashViewController.swift */,
+			);
+			path = "Animated Splash Screen";
+			sourceTree = "<group>";
+		};
 		36768D1624DC491500112893 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +425,7 @@
 				3605E3B724D2AEC5001CB361 /* LaunchScreen.storyboard in Resources */,
 				3627EC1024D2EAE1008D76DB /* Image.xcassets in Resources */,
 				3627EC1224D2EAF4008D76DB /* Icon.xcassets in Resources */,
+				3673B36A24E57B8300D2F78D /* logoGif.gif in Resources */,
 				3627EC0E24D2EAD0008D76DB /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +512,7 @@
 				3676A7EA24E28D1A0055E39A /* RegisterCollectionViewCell.swift in Sources */,
 				36520C5E24E3E576002F9539 /* SidebarTitleCell.swift in Sources */,
 				3627EC0824D2D983008D76DB /* Array.swift in Sources */,
+				3673B36624E5749100D2F78D /* AnimatedSplashViewController.swift in Sources */,
 				36768D1824DC492600112893 /* Constants.swift in Sources */,
 				360326D324E0A46600FF3DCB /* UILabel.swift in Sources */,
 				3627EC0224D2D983008D76DB /* UIColor.swift in Sources */,

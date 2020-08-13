@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 13.0, *) { }
         else {
             self.window = UIWindow(frame: UIScreen.main.bounds)
-            self.selectRoot()
+            window?.rootViewController = AnimatedSplashViewController()
             self.window?.makeKeyAndVisible()
         }
         return true
@@ -45,7 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func selectRoot() {
-        window?.rootViewController = AuthViewController()
 //        if let rememberMe = UserDefaults.standard.value(forKey: "rememberMe") as? Bool {
 //            if !rememberMe {
 //                UserDefaults.standard.setValue(nil, forKey: "profileImage")

@@ -193,14 +193,13 @@ extension Sidebar {
         darkBackgroundView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(darkBackgroundTapped)))
         
         mainView!.view.addSubview(self)
-        print("ferhan sidebar size : \(self.frame)")
         self.translatesAutoresizingMaskIntoConstraints = false
         self.heightAnchor.constraint(equalTo: mainView!.view.heightAnchor).isActive = true
         self.widthAnchor.constraint(equalToConstant: mainView!.view.frame.width*0.6).isActive = true
         self.topAnchor.constraint(equalTo: mainView!.view.topAnchor).isActive = true
         sidebarHidenConstraint.isActive = true
         self.mainView?.view.layoutIfNeeded()
-        print("ferhan sidebar size 2: \(self.frame)")
+        
         UIView.animate(withDuration: 0.5) {
             self.sidebarHidenConstraint.isActive = false
             self.sidebarShowConstraint.isActive = true

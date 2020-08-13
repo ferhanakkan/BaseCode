@@ -21,8 +21,8 @@ class ExampleViewController: UIViewController {
         self.view.backgroundColor = .orange
         
         label.numberOfLines = 0
-        label.text = "murat gelin damindan atlayamadim murat gelin damindan atlayamadim ben o guzel ferhan yare hoplayamadim"
-        label.underlineMyText(rangeArray: ["gelin","ben", "hoplayamadim"], underlinedFont: UIFont.worksansSemiBold(fontSize: 17), underlinedColor: .red)
+        label.text = "Bu bir deneme yazisidir. test edilmektedir."
+        label.underlineMyText(rangeArray: ["deneme", "test"], underlinedFont: UIFont.worksansSemiBold(fontSize: 17), underlinedColor: .red)
         label.lineBreakMode = .byWordWrapping
         label.isUserInteractionEnabled = true
         
@@ -66,15 +66,11 @@ class ExampleViewController: UIViewController {
         
         let leftBarButton = UIBarButtonItem()
         let button = UIButton(type: .system)
-        button.setBackgroundImage(UIImage(named: "asd"), for: .normal)
+        button.setBackgroundImage(UIImage(named: "Profile"), for: .normal)
         button.heightAnchor.constraint(equalToConstant: 30).isActive = true
         button.widthAnchor.constraint(equalToConstant: 30).isActive = true
         button.addTarget(self, action: #selector(sidebarButtonPressed), for: .touchUpInside)
-        button.cornerRadius = 15
-        button.layer.borderWidth = 2
-        button.layer.masksToBounds = false
-        button.layer.borderColor = UIColor.orange.cgColor
-        button.clipsToBounds = true
+        button.borderAndCorner(radius: 15, color: .orange, width: 2)
         button.translatesAutoresizingMaskIntoConstraints = false
         leftBarButton.customView = button
         navigationItem.leftBarButtonItem = leftBarButton
@@ -88,14 +84,17 @@ class ExampleViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        LoadingView.show()
+        LoadingView.show()
     }
     
     @objc func tappedOnLabel(_ gesture: UITapGestureRecognizer) {
         guard let text = label.text else { return }
-        let ferhan = (text as NSString).range(of: "ferhan")
-        if gesture.didTapAttributedTextInLabel(label: self.label, inRange: ferhan) {
-            print("ferhan")
+        let deneme = (text as NSString).range(of: "deneme")
+        let test = (text as NSString).range(of: "test")
+        if gesture.didTapAttributedTextInLabel(label: self.label, inRange: deneme) {
+            print("deneme")
+        } else if gesture.didTapAttributedTextInLabel(label: self.label, inRange: test) {
+            print("test")
         }
     }
 }
