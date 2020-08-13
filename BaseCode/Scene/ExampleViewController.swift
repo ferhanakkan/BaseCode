@@ -24,7 +24,7 @@ class ExampleViewController: UIViewController {
         
 
         
-        UserDefaults.setLanguage(language: .english)
+//        UserDefaults.setLanguage(language: .turkish)
         label.text = "language".localized()
         
         

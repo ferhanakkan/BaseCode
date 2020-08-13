@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        setLanguage()
         AppManager.shared.setReachability()
         firebase(application)
         setKeyboard()
@@ -63,6 +64,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setKeyboard() {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+    }
+    
+    private func setLanguage() {
+        
+        guard let _ = UserDefaults.standard.string(forKey: "lang") else {
+            let supportedLang = ["en","tr"]
+            let currentDeviceLang = Locale.current.languageCode
+            if supportedLang.contains(currentDeviceLang!) {
+                UserDefaults.standard.setValue(currentDeviceLang!, forKey: "lang")
+            } else {
+                UserDefaults.setLanguage(language: .turkish)
+            }
+            return
+        }
     }
 
 }
