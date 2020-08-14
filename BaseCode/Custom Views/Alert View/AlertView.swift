@@ -30,7 +30,7 @@ final class AlertView: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.7) {
             self.mainView.alpha = 1
             self.view.backgroundColor = UIColor(displayP3Red: 9/255, green: 18/255, blue: 17/255, alpha: 1.0)
             self.view.layoutIfNeeded()
@@ -150,7 +150,7 @@ final class AlertView: UIViewController {
     
     private func dismissAnimation() {
         
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.7) {
             self.mainView.alpha = 0
             self.view.backgroundColor = UIColor(displayP3Red: 9/255, green: 18/255, blue: 17/255, alpha: 0.0)
             self.view.layoutIfNeeded()
@@ -162,7 +162,7 @@ final class AlertView: UIViewController {
     
     private func dismissAnimationCheck() {
         
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.7) {
             self.mainView.alpha = 0
             self.view.backgroundColor = UIColor(displayP3Red: 9/255, green: 18/255, blue: 17/255, alpha: 0.0)
             self.view.layoutIfNeeded()
