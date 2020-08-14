@@ -6,4 +6,26 @@
   
 */
 
-"language" = "eng";
+// AuthViewController
+
+"AuthViewController.ForgotCollectionViewCell.title" = "We will send you a mail to reset your password";
+"AuthViewController.ForgotCollectionViewCell.resetPasswordButton" = "Reset Password";
+"AuthViewController.ForgotCollectionViewCell.bottomLabel" = "Did you remember your password?";
+"AuthViewController.ForgotCollectionViewCell.logIn" = "Log In";
+
+"AuthViewController.RegisterCollectionViewCell.userAgreementLabel" = "By creating an account, you accept our User Agreements .";
+"AuthViewController.RegisterCollectionViewCell.userAgreement" = "User Agreements";
+"AuthViewController.RegisterCollectionViewCell.bottomLabel" = "Did you register before?";
+"AuthViewController.RegisterCollectionViewCell.logIn" = "Log In";
+"AuthViewController.RegisterCollectionViewCell.register" = "Register";
+"AuthViewController.RegisterCollectionViewCell.remember" = "Remember Me";
+
+
+"AuthViewController.LogInColletionViewCell.resetPassword" = "Reset Password";
+"AuthViewController.LogInColletionViewCell.userAgreement" = "User Agreements";
+"AuthViewController.LogInColletionViewCell.bottomLabel" = "Did you register ?";
+"AuthViewController.LogInColletionViewCell.logIn" = "Log In";
+"AuthViewController.LogInColletionViewCell.register" = "Register";
+"AuthViewController.LogInColletionViewCell.remember" = "Remember Me";
+
+

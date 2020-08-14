@@ -56,7 +56,7 @@ extension RegisterColletionViewCell {
     private func setMainView() {
         contentView.addSubview(mainView)
         mainView.backgroundColor = .white
-        mainView.shadowAndCorner(radius: 20, shadowRadius: 7, opacity: 0.6, color: .black, width: 5, height: 5)
+        mainView.shadowAndCorner(cornerRadius: 20, shadowRadius: 7, opacity: 0.6, color: .black, width: 5, height: 5)
         mainView.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(20)
@@ -67,6 +67,7 @@ extension RegisterColletionViewCell {
     private func setEmailInput() {
         mainView.addSubview(emailInput)
         emailInput.inputType = .email
+//        emailInput.setLabelText()
         emailInput.snp.makeConstraints { (make) in
             make.height.equalTo(40)
             make.top.leading.equalToSuperview().offset(20)
@@ -77,6 +78,7 @@ extension RegisterColletionViewCell {
     private func setPasswordInput() {
         mainView.addSubview(passwordInput)
         passwordInput.inputType = .password
+        //passwordInput.setLabelText()
         passwordInput.snp.makeConstraints { (make) in
             make.height.equalTo(40)
             make.top.equalTo(emailInput.snp.bottom).offset(20)
@@ -89,6 +91,7 @@ extension RegisterColletionViewCell {
     private func setUsernameInput() {
         mainView.addSubview(usernameInput)
         usernameInput.inputType = .username
+        // usernameInput.setLabelText
         usernameInput.snp.makeConstraints { (make) in
             make.height.equalTo(40)
             make.top.equalTo(passwordInput.snp.bottom).offset(20)
@@ -104,8 +107,8 @@ extension RegisterColletionViewCell {
             make.leading.equalToSuperview().offset(20)
         }
         userAgreementLabel.numberOfLines = 0
-        userAgreementLabel.text = "By creating an account, you accept our User Agreements ."
-        userAgreementLabel.underlineMyText(rangeArray: ["User Agreements"], underlinedFont: .boldSystemFont(ofSize: 16), underlinedColor: .red)
+        userAgreementLabel.text = "AuthViewController.RegisterCollectionViewCell.userAgreementLabel".localized()
+        userAgreementLabel.underlineMyText(rangeArray: ["AuthViewController.RegisterCollectionViewCell.userAgreement".localized()], underlinedFont: .boldSystemFont(ofSize: 16), underlinedColor: .red)
         userAgreementLabel.lineBreakMode = .byWordWrapping
         userAgreementLabel.isUserInteractionEnabled = true
         
@@ -121,7 +124,7 @@ extension RegisterColletionViewCell {
             make.height.width.equalTo(15)
             make.centerY.equalTo(userAgreementLabel)
             make.leading.equalTo(userAgreementLabel.snp.trailing).offset(10)
-            make.trailing.lessThanOrEqualTo(mainView.snp.trailing).inset(30)
+            make.trailing.equalToSuperview().inset(30)
         }
         userAgreementCheckBox.onTintColor = .orange
         userAgreementCheckBox.onCheckColor = .orange
@@ -134,7 +137,7 @@ extension RegisterColletionViewCell {
             make.leading.equalToSuperview().offset(20)
             make.height.equalTo(40)
         }
-        rememberLabel.text = "Remember Me"
+        rememberLabel.text = "AuthViewController.RegisterCollectionViewCell.remember".localized()
     }
     
     private func setCheckBox() {
@@ -156,7 +159,7 @@ extension RegisterColletionViewCell {
             make.trailing.equalToSuperview().inset(20)
             make.height.equalTo(40)
         }
-        registerButton.authTypeButton(title: "Register")
+        registerButton.authTypeButton(title: "AuthViewController.RegisterCollectionViewCell.register".localized())
         registerButton.addTarget(self, action: #selector(registerButtonPressed), for: .touchUpInside)
     }
     
@@ -176,7 +179,7 @@ extension RegisterColletionViewCell {
             make.leading.top.equalToSuperview().offset(10)
             make.bottom.equalToSuperview().inset(10)
         }
-        bottomLabel.text = "Did you register before?"
+        bottomLabel.text = "AuthViewController.RegisterCollectionViewCell.bottomLabel".localized()
         bottomLabel.font = UIFont.systemFont(ofSize: 17)
     }
     
@@ -184,12 +187,11 @@ extension RegisterColletionViewCell {
         bottomSubView.addSubview(logInButton)
         logInButton.snp.makeConstraints { (make) in
             make.centerY.equalTo(bottomLabel.snp.centerY)
-            make.leading.equalTo(bottomLabel.snp.trailing)
+            make.leading.equalTo(bottomLabel.snp.trailing).offset(5)
             make.trailing.equalToSuperview().inset(10)
             make.height.equalTo(30)
-            make.width.equalTo(60)
         }
-        logInButton.setTitle("Log In", for: .normal)
+        logInButton.setTitle("AuthViewController.RegisterCollectionViewCell.logIn".localized(), for: .normal)
         logInButton.setTitleColor(.orange, for: .normal)
         logInButton.addTarget(self, action: #selector(logInPressed), for: .touchUpInside)
     }
@@ -201,8 +203,8 @@ extension RegisterColletionViewCell {
     
     @objc func tappedOnLabel(_ gesture: UITapGestureRecognizer) {
         guard let text = userAgreementLabel.text else { return }
-        let yare = (text as NSString).range(of: "User Agreements")
-        if gesture.didTapAttributedTextInLabel(label: self.userAgreementLabel, inRange: yare) {
+        let mytext = (text as NSString).range(of: "AuthViewController.RegisterCollectionViewCell.userAgreement".localized())
+        if gesture.didTapAttributedTextInLabel(label: self.userAgreementLabel, inRange: mytext) {
             let vc = UserAgreementViewController()
             UIApplication.getPresentedViewController()!.present(vc, animated: true)
         }

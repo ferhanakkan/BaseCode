@@ -53,7 +53,7 @@ extension LogInColletionViewCell {
     private func setMainView() {
         contentView.addSubview(mainView)
         mainView.backgroundColor = .white
-        mainView.shadowAndCorner(radius: 20, shadowRadius: 7, opacity: 0.6, color: .black, width: 5, height: 5)
+        mainView.shadowAndCorner(cornerRadius: 20, shadowRadius: 7, opacity: 0.6, color: .black, width: 5, height: 5)
         mainView.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(20)
@@ -89,7 +89,7 @@ extension LogInColletionViewCell {
             make.leading.equalToSuperview().offset(20)
             make.height.equalTo(40)
         }
-        rememberLabel.text = "Remember Me"
+        rememberLabel.text = "AuthViewController.LogInColletionViewCell.remember".localized()
     }
     
     private func setCheckBox() {
@@ -110,10 +110,10 @@ extension LogInColletionViewCell {
             make.trailing.equalToSuperview().inset(20)
             make.leading.greaterThanOrEqualTo(checkBox.snp.trailing)
             make.height.equalTo(40)
-            make.width.equalTo(140)
+            make.width.lessThanOrEqualTo(140)
         }
         resetPasswordButton.setTitleColor(.orange, for: .normal)
-        resetPasswordButton.setTitle("Reset Password", for: .normal)
+        resetPasswordButton.setTitle("AuthViewController.LogInColletionViewCell.resetPassword".localized(), for: .normal)
         resetPasswordButton.addTarget(self, action: #selector(resetPasswordPressed), for: .touchUpInside)
     }
     
@@ -125,7 +125,7 @@ extension LogInColletionViewCell {
             make.trailing.equalToSuperview().inset(20)
             make.height.equalTo(40)
         }
-        logInButton.authTypeButton(title: "Log In")
+        logInButton.authTypeButton(title: "AuthViewController.LogInColletionViewCell.logIn".localized())
         logInButton.addTarget(self, action: #selector(logInButtonPressed), for: .touchUpInside)
     }
     
@@ -144,7 +144,7 @@ extension LogInColletionViewCell {
             make.leading.top.equalToSuperview().offset(10)
             make.bottom.equalToSuperview().inset(10)
         }
-        bottomLabel.text = "Did you register ?"
+        bottomLabel.text = "AuthViewController.LogInColletionViewCell.bottomLabel".localized()
         bottomLabel.font = UIFont.systemFont(ofSize: 17)
     }
     
@@ -152,12 +152,11 @@ extension LogInColletionViewCell {
         bottomSubView.addSubview(registerButton)
         registerButton.snp.makeConstraints { (make) in
             make.centerY.equalTo(bottomLabel.snp.centerY)
-            make.leading.equalTo(bottomLabel.snp.trailing)
+            make.leading.equalTo(bottomLabel.snp.trailing).offset(5)
             make.trailing.equalToSuperview()
             make.height.equalTo(30)
-            make.width.equalTo(80)
         }
-        registerButton.setTitle("Register", for: .normal)
+        registerButton.setTitle("AuthViewController.LogInColletionViewCell.register".localized(), for: .normal)
         registerButton.setTitleColor(.orange, for: .normal)
         registerButton.addTarget(self, action: #selector(registerButtonPressed), for: .touchUpInside)
     }

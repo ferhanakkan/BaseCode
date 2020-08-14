@@ -22,9 +22,9 @@ class AuthViewController: UIViewController {
         collectionview.backgroundColor = .clear
         collectionview.isPagingEnabled = true
         collectionview.isScrollEnabled = false
-        collectionview.register(RegisterColletionViewCell.self, forCellWithReuseIdentifier: "RegisterColletionViewCell")
-        collectionview.register(LogInColletionViewCell.self, forCellWithReuseIdentifier: "LogInColletionViewCell")
-        collectionview.register(ForgotColletionViewCell.self, forCellWithReuseIdentifier: "ForgotColletionViewCell")
+        collectionview.register(RegisterColletionViewCell.self, forCellWithReuseIdentifier: Constants.AuthViewController.registerCollectionViewCell)
+        collectionview.register(LogInColletionViewCell.self, forCellWithReuseIdentifier: Constants.AuthViewController.logInCollectionViewCell)
+        collectionview.register(ForgotColletionViewCell.self, forCellWithReuseIdentifier: Constants.AuthViewController.forgotCollectionViewCell)
         return collectionview
     }()
     

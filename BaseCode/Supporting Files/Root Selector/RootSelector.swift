@@ -10,6 +10,7 @@ import UIKit
 class RootSelector {
     
     init() {
+        UserDefaults.setLanguage(language: .english)
         let userDefaults = UserDefaults.standard
         if let autoLogIn = userDefaults.value(forKey: Constants.Api.autoLogIn) as? Bool , let _ = userDefaults.value(forKey: Constants.Api.token) as? String {
             

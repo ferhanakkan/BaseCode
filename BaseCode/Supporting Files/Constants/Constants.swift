@@ -33,4 +33,10 @@ struct Constants {
         }
     }
     
+    struct AuthViewController {
+            static let registerCollectionViewCell = "RegisterColletionViewCell"
+            static let logInCollectionViewCell = "LogInColletionViewCell"
+            static let forgotCollectionViewCell = "ForgotColletionViewCell"
+    }
+    
 }

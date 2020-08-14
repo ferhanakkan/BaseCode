@@ -10,15 +10,15 @@ import UIKit
 
 extension UIView {
     
-@IBInspectable var cornerRadius: CGFloat {
-    get {
-        return layer.cornerRadius
+    @IBInspectable var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.masksToBounds = true
+            layer.cornerRadius = abs(CGFloat(Int(newValue * 100)) / 100)
+        }
     }
-    set {
-        layer.masksToBounds = true
-        layer.cornerRadius = abs(CGFloat(Int(newValue * 100)) / 100)
-    }
-}
     
     func roundCornersEachCorner(_ corners: UIRectCorner, radius: CGFloat) {
         if #available(iOS 11.0, *) {
@@ -33,8 +33,8 @@ extension UIView {
         }
     }
     
-    func shadowAndCorner(radius: CGFloat, shadowRadius: CGFloat, opacity: Float, color: UIColor, width: Int, height: Int) {
-        layer.cornerRadius = radius
+    func shadowAndCorner(cornerRadius: CGFloat, shadowRadius: CGFloat, opacity: Float, color: UIColor, width: Int, height: Int) {
+        layer.cornerRadius = cornerRadius
         clipsToBounds = true
         layer.masksToBounds = false
         layer.shadowRadius = shadowRadius
@@ -58,34 +58,11 @@ extension UIView {
     }
     
     func makeRounded() {
-        layer.borderWidth = 2
         layer.masksToBounds = false
-        layer.borderColor = UIColor.gray.cgColor
         layer.cornerRadius = frame.height/2
         clipsToBounds = true
     }
     
 }
 
-
-extension UIView{
-    func animShow(){
-        UIView.animate(withDuration: 2, delay: 0, options: [.curveEaseIn],
-                       animations: {
-                        self.center.y -= self.bounds.height
-                        self.layoutIfNeeded()
-        }, completion: nil)
-        self.isHidden = false
-    }
-    func animHide(){
-        UIView.animate(withDuration: 2, delay: 0, options: [.curveLinear],
-                       animations: {
-                        self.center.y += self.bounds.height
-                        self.layoutIfNeeded()
-
-        },  completion: {(_ completed: Bool) -> Void in
-        self.isHidden = true
-            })
-    }
-}
 
