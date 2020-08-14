@@ -8,7 +8,7 @@
 
 // AuthViewController
 
-"AuthViewController.ForgotCollectionViewCell.title" = "We will send you a mail to reset your password";
+"AuthViewController.ForgotCollectionViewCell.title" = "Şifrenizi yenileme talebi gönderdiğinizde size mail göndereceğiz.";
 "AuthViewController.ForgotCollectionViewCell.resetPasswordButton" = "Şifreyi sıfırla";
 "AuthViewController.ForgotCollectionViewCell.bottomLabel" = "Şifrenizi hatırladınız mı ?";
 "AuthViewController.ForgotCollectionViewCell.logIn" = "Giriş Yap";

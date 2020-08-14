@@ -43,23 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
-    
-    private func selectRoot() {
-//        if let rememberMe = UserDefaults.standard.value(forKey: "rememberMe") as? Bool {
-//            if !rememberMe {
-//                UserDefaults.standard.setValue(nil, forKey: "profileImage")
-//                UserDefaults.standard.setValue(nil, forKey: "rememberMe")
-//                let firebaseAuth = Auth.auth()
-//                do {
-//                    try firebaseAuth.signOut()
-//                } catch let signOutError as NSError {
-//                    print ("Error signing out: %@", signOutError)
-//                    LoadingView.hide()
-//                }
-//            }
-//        }
-//        window?.rootViewController = Tabbar.createTabBarWithNavigationBar()
-    }
 
     private func setKeyboard() {
         IQKeyboardManager.shared.enable = true
@@ -67,17 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setLanguage() {
-        
-        guard let _ = UserDefaults.standard.string(forKey: "lang") else {
-            let supportedLang = ["en","tr"]
-            let currentDeviceLang = Locale.current.languageCode
-            if supportedLang.contains(currentDeviceLang!) {
-                UserDefaults.standard.setValue(currentDeviceLang!, forKey: "lang")
-            } else {
-                UserDefaults.setLanguage(language: .turkish)
-            }
-            return
-        }
+        AppManager.shared.appLaunchLanguage()
     }
 
 }

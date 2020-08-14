@@ -11,15 +11,15 @@ extension String {
     
     func localized() -> String {
         
-        if let _ = UserDefaults.standard.string(forKey: "lang") {} else {
-            UserDefaults.standard.setValue("en", forKey: "lang")
-        }
+//        if let _ = UserDefaults.standard.string(forKey: "lang") {} else {
+//            UserDefaults.standard.setValue("en", forKey: "lang")
+//        }
+//
+//        let lang = UserDefaults.standard.string(forKey: "lang")
+//        let path = Bundle.main.path(forResource: lang, ofType: "lproj")
+//        let bundle = Bundle(path: path!)
         
-        let lang = UserDefaults.standard.string(forKey: "lang")
-        let path = Bundle.main.path(forResource: lang, ofType: "lproj")
-        let bundle = Bundle(path: path!)
-        
-        return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
+        return NSLocalizedString(self, tableName: nil, bundle: AppManager.shared.bundle, value: "", comment: "")
     }
 }
 

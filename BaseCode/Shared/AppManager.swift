@@ -7,9 +7,47 @@
 
 import UIKit
 
-struct AppManager {
+enum Language: String {
+    case english = "en"
+    case turkish = "tr"
+}
+
+class AppManager {
     
     static var shared = AppManager()
+    
+    
+    //MARK: - Language
+    
+    var bundle = Bundle()
+    
+    func appLaunchLanguage() {
+        if let selectedLanguage = UserDefaults.standard.string(forKey: "lang") {
+            let path = Bundle.main.path(forResource: selectedLanguage, ofType: "lproj")
+            self.bundle = Bundle(path: path!)!
+        } else {
+            let supportedLang = ["en","tr"]
+            let currentDeviceLang = Locale.current.languageCode
+            if supportedLang.contains(currentDeviceLang!) {
+                setLanguage(language: currentDeviceLang!)
+            } else {
+                setLanguage(language: .english)
+            }
+        }
+    }
+    
+    func setLanguage(language: Language) {
+        UserDefaults.standard.setValue(language.rawValue, forKey: "lang")
+        let path = Bundle.main.path(forResource: language.rawValue, ofType: "lproj")
+        self.bundle = Bundle(path: path!)!
+    }
+    
+    func setLanguage(language: String) {
+        UserDefaults.standard.setValue(language, forKey: "lang")
+        let path = Bundle.main.path(forResource: language, ofType: "lproj")
+        self.bundle = Bundle(path: path!)!
+    }
+    
     
     //MARK: - Internet Connection
     let reachability: Reachability = try! Reachability(hostname: "google.com")
@@ -47,4 +85,5 @@ struct AppManager {
 //        vc.modalPresentationStyle = .overFullScreen
 //        UIApplication.getPresentedViewController()!.present(vc, animated: true)
 //    }
+    
 }
