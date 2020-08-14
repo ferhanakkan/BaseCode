@@ -125,11 +125,7 @@ extension LogInColletionViewCell {
             make.trailing.equalToSuperview().inset(20)
             make.height.equalTo(40)
         }
-        logInButton.backgroundColor = .gray
-        logInButton.cornerRadius = 15
-        logInButton.setTitleColor(.white, for: .normal)
-        logInButton.setTitle("Log In", for: .normal)
-        logInButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+        logInButton.authTypeButton(title: "Log In")
         logInButton.addTarget(self, action: #selector(logInButtonPressed), for: .touchUpInside)
     }
     

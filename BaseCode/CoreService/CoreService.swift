@@ -28,22 +28,10 @@ class CoreService {
         
         if let token: String = UserDefaults.standard.value(forKey: Constants.Api.token) as? String {
             
-            #if targetEnvironment(simulator)
-            return  ["Authorization": "Bearer \(token)",
-                     "Content-Type" : "application/json",
-                     "Accept-Language": "en-US"]
-            #endif
-            
             return  ["Authorization": "Bearer \(token)",
                      "Content-Type" : "application/json",
                      "Accept-Language": headerLang]
         }
-        
-        #if targetEnvironment(simulator)
-        return  ["Content-Type" : "application/json",
-                 "Accept-Language": "en-US"]
-        #endif
-        
         
         return ["Content-Type" : "application/json",
                 "Accept-Language": headerLang ]

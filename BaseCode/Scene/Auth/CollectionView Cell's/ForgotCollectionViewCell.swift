@@ -82,11 +82,7 @@ extension ForgotColletionViewCell {
             make.trailing.equalToSuperview().inset(20)
             make.height.equalTo(40)
         }
-        resetButton.setTitle("Reset Password", for: .normal)
-        resetButton.cornerRadius = 15
-        resetButton.setTitleColor(.white, for: .normal)
-        resetButton.backgroundColor = .gray
-        resetButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        resetButton.authTypeButton(title: "Reset Password")
         resetButton.addTarget(self, action: #selector(resetButtonPressed), for: .touchUpInside)
         
     }

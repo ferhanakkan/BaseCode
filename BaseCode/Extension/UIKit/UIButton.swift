@@ -9,12 +9,22 @@
 import UIKit
 
 extension UIButton {
-    func setMyButton(title: String, color: UIColor, background: UIColor, borderColor: UIColor) {
+    
+    func authTypeButton(title: String) {
         setTitle(title, for: .normal)
-        setTitleColor(color, for: .normal)
+        setTitleColor(.white, for: .normal)
         cornerRadius = 15
-        backgroundColor = background
-        layer.borderWidth = 3
-        layer.borderColor = borderColor.cgColor
+        backgroundColor = .gray
+        titleLabel?.font = .boldSystemFont(ofSize: 15)
+    }
+    
+    func createBarButton(backgroundImageName: String, size: Int, cornerRadius: Int, borderWidth: Int, borderColor: UIColor) -> UIButton {
+        let button = UIButton(type: .system)
+        button.setBackgroundImage(UIImage(named: backgroundImageName), for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.heightAnchor.constraint(equalToConstant: CGFloat(size)).isActive = true
+        button.widthAnchor.constraint(equalToConstant: CGFloat(size)).isActive = true
+        button.borderAndCorner(radius: CGFloat(cornerRadius), color: borderColor, width: borderWidth)
+        return button
     }
 }

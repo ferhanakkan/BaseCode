@@ -156,11 +156,7 @@ extension RegisterColletionViewCell {
             make.trailing.equalToSuperview().inset(20)
             make.height.equalTo(40)
         }
-        registerButton.backgroundColor = .gray
-        registerButton.setTitleColor(.white, for: .normal)
-        registerButton.cornerRadius = 15
-        registerButton.setTitle("Register", for: .normal)
-        registerButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        registerButton.authTypeButton(title: "Register")
         registerButton.addTarget(self, action: #selector(registerButtonPressed), for: .touchUpInside)
     }
     

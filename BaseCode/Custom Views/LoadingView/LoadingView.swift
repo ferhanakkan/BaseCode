@@ -11,8 +11,8 @@ import SnapKit
 
 class LoadingView {
     
-    static var currentOverlay : UIView?
-    static var currentOverlayTarget : UIView?
+    static var currentView : UIView?
+    static var mainViewTarget : UIView?
     static var loadingSubView : UIView?
     
     static func show() {
@@ -23,26 +23,26 @@ class LoadingView {
         show(currentMainWindow)
     }
     
-    static func show(_ overlayTarget : UIView) {
+    static func show(_ mainView : UIView) {
         
-        let overlay = UIView()
+        let subView = UIView()
 //        overlay.backgroundColor = UIColor.darkGray.withAlphaComponent(0.8)
-        overlay.backgroundColor = .clear
+        subView.backgroundColor = .clear
         
-        overlayTarget.addSubview(overlay)
-        overlayTarget.bringSubviewToFront(overlay)
+        mainView.addSubview(subView)
+        mainView.bringSubviewToFront(subView)
         
-        overlay.snp.makeConstraints { (make) in
+        subView.snp.makeConstraints { (make) in
             make.leading.trailing.bottom.top.equalToSuperview()
         }
         
         loadingSubView = UIView()
-        overlay.addSubview(loadingSubView!)
+        subView.addSubview(loadingSubView!)
         loadingSubView?.cornerRadius = 15
         loadingSubView?.backgroundColor = .lightGray
         loadingSubView?.snp.makeConstraints({ (make) in
-            make.height.equalTo(overlayTarget.frame.width*0.2)
-            make.width.equalTo(overlayTarget.frame.width*0.2)
+            make.height.equalTo(mainView.frame.width*0.2)
+            make.width.equalTo(mainView.frame.width*0.2)
             make.center.equalToSuperview()
         })
 
@@ -56,15 +56,15 @@ class LoadingView {
         }
         loadingInducator.startAnimating()
 
-        currentOverlay = overlay
-        currentOverlayTarget = overlayTarget
+        currentView = subView
+        mainViewTarget = mainView
     }
     
     static func hide() {
-        if currentOverlay != nil {
-            currentOverlay?.removeFromSuperview()
-            currentOverlay =  nil
-            currentOverlayTarget = nil
+        if currentView != nil {
+            currentView?.removeFromSuperview()
+            currentView =  nil
+            mainViewTarget = nil
             loadingSubView?.removeFromSuperview()
             loadingSubView = nil
         }
