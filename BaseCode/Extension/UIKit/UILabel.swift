@@ -9,8 +9,6 @@ import UIKit
 
 extension UILabel {
     
-    
-    //Multilin label underLine function
     func underlineMyText(rangeArray: [String], underlinedFont: UIFont, underlinedColor: UIColor) {
         if let textString = self.text {
 

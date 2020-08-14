@@ -35,7 +35,7 @@ class AnimatedSplashViewController: UIViewController, SwiftyGifDelegate {
     
     
     func gifDidStop(sender: UIImageView) {
-        self.view.window?.rootViewController = ExampleViewController()
+        let _ = RootSelector()
     }
     
 }

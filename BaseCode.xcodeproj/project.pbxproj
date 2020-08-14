@@ -33,6 +33,7 @@
 		3627EC1224D2EAF4008D76DB /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3627EC1124D2EAF4008D76DB /* Icon.xcassets */; };
 		362CA94924E5C6BA00FD6599 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 362CA94B24E5C6BA00FD6599 /* Localizable.strings */; };
 		362CA94E24E5CC2D00FD6599 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362CA94D24E5CC2D00FD6599 /* UserDefaults.swift */; };
+		362CA95124E5D89A00FD6599 /* RootSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362CA95024E5D89A00FD6599 /* RootSelector.swift */; };
 		36520C5B24E3E36A002F9539 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36520C5A24E3E36A002F9539 /* Sidebar.swift */; };
 		36520C5E24E3E576002F9539 /* SidebarTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36520C5D24E3E576002F9539 /* SidebarTitleCell.swift */; };
 		36520C6024E3E912002F9539 /* SidebarSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36520C5F24E3E912002F9539 /* SidebarSubCell.swift */; };
@@ -83,6 +84,7 @@
 		362CA94A24E5C6BA00FD6599 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		362CA94C24E5C6C700FD6599 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		362CA94D24E5CC2D00FD6599 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		362CA95024E5D89A00FD6599 /* RootSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootSelector.swift; sourceTree = "<group>"; };
 		36520C5A24E3E36A002F9539 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		36520C5D24E3E576002F9539 /* SidebarTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarTitleCell.swift; sourceTree = "<group>"; };
 		36520C5F24E3E912002F9539 /* SidebarSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarSubCell.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		3627EC0A24D2EA7C008D76DB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				362CA94F24E5D88C00FD6599 /* Root Selector */,
 				3679012A24E59B1700CCED0A /* Language Files */,
 				360326DA24E19B9000FF3DCB /* Fonts */,
 				36768D1624DC491500112893 /* Constants */,
@@ -262,6 +265,14 @@
 				3627EC1124D2EAF4008D76DB /* Icon.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		362CA94F24E5D88C00FD6599 /* Root Selector */ = {
+			isa = PBXGroup;
+			children = (
+				362CA95024E5D89A00FD6599 /* RootSelector.swift */,
+			);
+			path = "Root Selector";
 			sourceTree = "<group>";
 		};
 		36520C5824E3E34A002F9539 /* LoadingView */ = {
@@ -538,6 +549,7 @@
 				360326D524E0B53300FF3DCB /* UITapGestureRecognizer.swift in Sources */,
 				36768D1E24DC6DB200112893 /* ExampleService.swift in Sources */,
 				3627EC0324D2D983008D76DB /* UITextfield.swift in Sources */,
+				362CA95124E5D89A00FD6599 /* RootSelector.swift in Sources */,
 				36520C5B24E3E36A002F9539 /* Sidebar.swift in Sources */,
 				3627EC0724D2D983008D76DB /* UIApplication.swift in Sources */,
 				3627EC0024D2D983008D76DB /* UIView.swift in Sources */,

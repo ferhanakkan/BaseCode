@@ -19,6 +19,7 @@ struct Constants {
     
     struct Api {
         static let token = "token"
+        static let autoLogIn = "rememberMe"
     }
     
     struct Font {
@@ -31,4 +32,5 @@ struct Constants {
             static let sidebarSubCell = "SidebarSubCell"
         }
     }
+    
 }

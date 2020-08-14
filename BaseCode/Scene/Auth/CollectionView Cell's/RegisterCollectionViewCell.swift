@@ -228,9 +228,9 @@ extension RegisterColletionViewCell {
     
     private func rememberMeSetter() {
         if checkBox.on {
-            UserDefaults.standard.setValue(true, forKey: "rememberMe")
+            UserDefaults.standard.setValue(true, forKey: Constants.Api.autoLogIn)
         } else {
-            UserDefaults.standard.setValue(false, forKey: "rememberMe")
+            UserDefaults.standard.setValue(false, forKey: Constants.Api.autoLogIn)
         }
     }
 }
