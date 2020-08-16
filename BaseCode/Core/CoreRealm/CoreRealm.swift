@@ -16,27 +16,27 @@ class CoreRealm {
     
     let realm = try! Realm()
     
-    func deleteAllDB() {
+    func deleteDatabase() {
         try! realm.write {
             realm.deleteAll()
         }
     }
     
-    func deleteSelectedTypeTable<T: Object>(selectedType: T.Type) {
+    func delete<T: Object>(selectedType: T.Type) {
         try! realm.write {
             let object = realm.objects(selectedType)
             realm.delete(object)
         }
     }
     
-    func deleteSelectedObject<T: Object>(selectedType: T.Type, index: Int) {
+    func delete<T: Object>(selectedType: T.Type, index: Int) {
         try! realm.write {
             let object = realm.objects(selectedType)
             realm.delete(object[index])
         }
     }
     
-    func addObjectToDB<T: Object>(_ selectedObject: T) {
+    func add<T: Object>(_ selectedObject: T) {
         do {
             try realm.write {
                 realm.add(selectedObject)
@@ -47,7 +47,7 @@ class CoreRealm {
     }
     
     // return Diretly object
-    func readSelectedObject<T: Object>(selectedType: T.Type) -> [T]{
+    func getArray<T: Object>(selectedType: T.Type) -> [T]{
         let object = realm.objects(selectedType)
         var array = [T]()
         for data in object {
@@ -56,7 +56,7 @@ class CoreRealm {
         return array
     }
     
-    func readSelectedObject<T: Object>(selectedType: T.Type, index: Int) -> T{
+    func getObject<T: Object>(selectedType: T.Type, index: Int) -> T{
         let object = realm.objects(selectedType)
         var array = [T]()
         for data in object {
@@ -65,10 +65,13 @@ class CoreRealm {
         return array[index]
     }
     
-    // return Result tyle    
-    func readSelectedObject<T: Object>(selectedType: T.Type) -> Results<T> {
-        let object = realm.objects(selectedType)
-        return object
+    // return Result tyle
+    func getResults<T: Object>(selectedType: T.Type) -> Results<T> {
+        return realm.objects(selectedType)
+    }
+    
+    func getResult<T: Object>(selectedType: T.Type) -> T? {
+        return realm.objects(selectedType).first
     }
     
     func createJsonToDB<T: Object>(jsonData data: Data, formatType: T.Type) {
