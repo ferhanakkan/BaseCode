@@ -221,7 +221,6 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.7):
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
-  - Fabric (1.10.2)
   - Firebase/Analytics (6.30.0):
     - Firebase/Core
   - Firebase/Auth (6.30.0):
@@ -379,9 +378,9 @@ PODS:
     - nanopb/encode (= 1.30905.0)
   - nanopb/decode (1.30905.0)
   - nanopb/encode (1.30905.0)
-  - NVActivityIndicatorView (5.0.0):
-    - NVActivityIndicatorView/Base (= 5.0.0)
-  - NVActivityIndicatorView/Base (5.0.0)
+  - NVActivityIndicatorView (5.0.1):
+    - NVActivityIndicatorView/Base (= 5.0.1)
+  - NVActivityIndicatorView/Base (5.0.1)
   - PromiseKit (6.13.1):
     - PromiseKit/CorePromise (= 6.13.1)
     - PromiseKit/Foundation (= 6.13.1)
@@ -406,7 +405,6 @@ DEPENDENCIES:
   - Alamofire (= 5.0.0-rc.2)
   - AuthTextField
   - BEMCheckBox
-  - Fabric (~> 1.10.2)
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
@@ -431,7 +429,6 @@ SPEC REPOS:
     - AuthTextField
     - BEMCheckBox
     - BoringSSL-GRPC
-    - Fabric
     - Firebase
     - FirebaseABTesting
     - FirebaseAnalytics
@@ -471,7 +468,6 @@ SPEC CHECKSUMS:
   AuthTextField: b83585d0535f5c4ed3d94906c298f96c7f6985bd
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
-  Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
   Firebase: 210f41ca352067d83b1ba4fd2e7fb49a0c017397
   FirebaseABTesting: 8a9d8df3acc2b43f4a22014ddf9f601bca6af699
   FirebaseAnalytics: a299a86ef70fcc6aa011418bc65a7e101fb9636c
@@ -495,7 +491,7 @@ SPEC CHECKSUMS:
   Kingfisher: de969e451c81ca6c07a454bc36fea84b8b08c3c7
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
-  NVActivityIndicatorView: f109ed069924ac1b4adbc1ae9cfaeac0be1d6c2c
+  NVActivityIndicatorView: 738e843cb8924e9e4fc3e559d0728031624bf860
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   Protobuf: 2793fcd0622a00b546c60e7cbbcc493e043e9bb9
@@ -505,6 +501,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyGif: e466e86c660d343357ab944a819a101c4127cb40
 
-PODFILE CHECKSUM: a1b6428e7fd29f92f0e32a922e061f35990f4629
+PODFILE CHECKSUM: 76994a3684df3b632891002d4d1f4e05a48f5152
 
 COCOAPODS: 1.9.3

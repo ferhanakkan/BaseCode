@@ -13,6 +13,6 @@ class RealmExampleModel: Object {
 }
 
 class TestObject: Object {
-    @objc dynamic var name: String = "testName"
-    @objc dynamic var surname: String = "testSurname"
+    @objc dynamic var subName: String? = nil
+    @objc dynamic var subSurname: String? = nil
 }

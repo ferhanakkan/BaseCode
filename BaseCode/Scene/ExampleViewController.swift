@@ -21,44 +21,6 @@ class ExampleViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .orange
         
-        let testObject = RealmExampleModel(value: ["age":1 , "name":"Name"])
-        testObject.age = 10
-        testObject.name = "Fero"
-        let testSubObject = TestObject(value: ["name": "FerhanSub", "surname": "AkkanSub"])
-        testObject.obje.append(testSubObject)
-
-        let realm = try! Realm()
-        
-        let realmObject = CoreRealm()
-        
-        realmObject.deleteSelectedTypeTable(selectedType: RealmExampleModel.self)
-        
-        //read object from selected Types table
-        let persons = realm.objects(RealmExampleModel.self)
-        for data in persons {
-            print(data)
-        }
-        
-//        realmObject.deleteSelectedTypeTable(selectedType: RealmExampleModel.self)
-
-
-//        let data = "{\"name\": \"San Francisco\", \"cityId\": 123}".data(using: .utf8)!
-//        let realm = try! Realm()
-//
-//        // Insert from Data containing JSON
-//        try! realm.write {
-//            let json = try! JSONSerialization.jsonObject(with: data, options: [])
-//            realm.create(City.self, value: json, update: .modified)
-//        }
-        
-//        // Loop through the first 5 Dog objects
-//        // restricting the number of objects read from disk
-//        let dogs = try! Realm().objects(Dog.self)
-//        for i in 0..<5 {
-//            let dog = dogs[i]
-//            // ...
-//        }
-        
         
 
         
