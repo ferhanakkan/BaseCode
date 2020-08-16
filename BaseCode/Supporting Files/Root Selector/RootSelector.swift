@@ -18,12 +18,12 @@ class RootSelector {
             } else {
                 userDefaults.setValue(nil, forKey: Constants.Api.token)
                 userDefaults.setValue(nil, forKey: Constants.Api.autoLogIn)
-                UIApplication.getPresentedViewController()?.view.window?.rootViewController = AuthViewController()
+                UIApplication.getPresentedViewController()?.view.window?.rootViewController = ExampleViewController()
             }
             
             
         } else {
-            UIApplication.getPresentedViewController()?.view.window?.rootViewController = AuthViewController()
+            UIApplication.getPresentedViewController()?.view.window?.rootViewController = ExampleViewController()
         }
     }
 }

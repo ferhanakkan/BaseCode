@@ -51,6 +51,8 @@
 		3676A7EB24E28D1A0055E39A /* UserAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676A7E424E28D1A0055E39A /* UserAgreementViewController.swift */; };
 		3679013424E59D0800CCED0A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3679013324E59D0800CCED0A /* String.swift */; };
 		36CC857B24E6E46B006A8FCF /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CC857A24E6E46B006A8FCF /* AlertView.swift */; };
+		36DB10C724E9473900361E92 /* CoreRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB10C624E9473900361E92 /* CoreRealm.swift */; };
+		36DB10CA24E950B900361E92 /* RealmExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB10C924E950B900361E92 /* RealmExampleModel.swift */; };
 		9289D783B792FC7F9CE386C9 /* Pods_BaseCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC3AA14188EBCC9169A3DD1 /* Pods_BaseCode.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +104,8 @@
 		3676A7E424E28D1A0055E39A /* UserAgreementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAgreementViewController.swift; sourceTree = "<group>"; };
 		3679013324E59D0800CCED0A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		36CC857A24E6E46B006A8FCF /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		36DB10C624E9473900361E92 /* CoreRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreRealm.swift; sourceTree = "<group>"; };
+		36DB10C924E950B900361E92 /* RealmExampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExampleModel.swift; sourceTree = "<group>"; };
 		E0852A22FA323DDDE88566FC /* Pods-BaseCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseCode.debug.xcconfig"; path = "Target Support Files/Pods-BaseCode/Pods-BaseCode.debug.xcconfig"; sourceTree = "<group>"; };
 		E8ADC355975DB18BC4723C7A /* Pods-BaseCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseCode.release.xcconfig"; path = "Target Support Files/Pods-BaseCode/Pods-BaseCode.release.xcconfig"; sourceTree = "<group>"; };
 		ECC3AA14188EBCC9169A3DD1 /* Pods_BaseCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,10 +171,11 @@
 		3605E3A924D2AEC3001CB361 /* BaseCode */ = {
 			isa = PBXGroup;
 			children = (
+				36DB10C824E950AC00361E92 /* Model */,
+				36DB10C424E9471300361E92 /* Core */,
 				360326DB24E19F3A00FF3DCB /* Custom Views */,
 				36768D1F24DC725B00112893 /* Scene */,
 				36768D1C24DC6DA500112893 /* Service */,
-				36768D1924DC4AF500112893 /* CoreService */,
 				3627EC0A24D2EA7C008D76DB /* Supporting Files */,
 				3627EBF324D2D983008D76DB /* Extension */,
 				3627EBF024D2D8EB008D76DB /* Shared */,
@@ -389,6 +394,31 @@
 			path = "Alert View";
 			sourceTree = "<group>";
 		};
+		36DB10C424E9471300361E92 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				36DB10C524E9472300361E92 /* CoreRealm */,
+				36768D1924DC4AF500112893 /* CoreService */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		36DB10C524E9472300361E92 /* CoreRealm */ = {
+			isa = PBXGroup;
+			children = (
+				36DB10C624E9473900361E92 /* CoreRealm.swift */,
+			);
+			path = CoreRealm;
+			sourceTree = "<group>";
+		};
+		36DB10C824E950AC00361E92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36DB10C924E950B900361E92 /* RealmExampleModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9538C15B09E7D8D5DFE77376 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,6 +566,7 @@
 			files = (
 				3676A7EB24E28D1A0055E39A /* UserAgreementViewController.swift in Sources */,
 				36768D1B24DC4B0900112893 /* CoreService.swift in Sources */,
+				36DB10C724E9473900361E92 /* CoreRealm.swift in Sources */,
 				3676A7E824E28D1A0055E39A /* CellProtocol.swift in Sources */,
 				3605E3C124D2D262001CB361 /* AppDelegatePushNotification.swift in Sources */,
 				3627EC0524D2D983008D76DB /* UIViewController.swift in Sources */,
@@ -571,6 +602,7 @@
 				3676A7E924E28D1A0055E39A /* ForgotCollectionViewCell.swift in Sources */,
 				3605E3AD24D2AEC3001CB361 /* SceneDelegate.swift in Sources */,
 				360326DD24E19F5600FF3DCB /* LoadingView.swift in Sources */,
+				36DB10CA24E950B900361E92 /* RealmExampleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

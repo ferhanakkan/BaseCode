@@ -16,13 +16,10 @@ target 'BaseCode' do
    pod 'Firebase/Storage'
    pod 'Firebase/Messaging'
    pod 'Firebase/InAppMessaging'
-   pod 'Fabric', '~> 1.10.2'
    pod 'NVActivityIndicatorView'
    pod 'Firebase/Crashlytics'
    pod 'BEMCheckBox'
    pod 'AuthTextField'
-   pod 'RxSwift', '~> 5'
-   pod 'RxCocoa', '~> 5'
    pod "SkeletonView"
    pod 'SwiftyGif'
 

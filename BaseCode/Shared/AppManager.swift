@@ -28,6 +28,7 @@ class AppManager {
         } else {
             let supportedLang = ["en","tr"]
             let currentDeviceLang = Locale.current.languageCode
+            print(currentDeviceLang)
             if supportedLang.contains(currentDeviceLang!) {
                 setLanguage(language: currentDeviceLang!)
             } else {

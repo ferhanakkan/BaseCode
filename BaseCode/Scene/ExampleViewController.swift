@@ -9,6 +9,7 @@ import UIKit
 import PromiseKit
 import SnapKit
 import Kingfisher
+import RealmSwift
 
 
 class ExampleViewController: UIViewController {
@@ -20,31 +21,70 @@ class ExampleViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .orange
         
-        label.numberOfLines = 0
+        let testObject = RealmExampleModel(value: ["age":1 , "name":"Name"])
+        testObject.age = 10
+        testObject.name = "Fero"
+        let testSubObject = TestObject(value: ["name": "FerhanSub", "surname": "AkkanSub"])
+        testObject.obje.append(testSubObject)
+
+        let realm = try! Realm()
         
-//        UserDefaults.setLanguage(language: .turkish)
-        label.text = "language".localized()
+        let realmObject = CoreRealm()
         
+        realmObject.deleteSelectedTypeTable(selectedType: RealmExampleModel.self)
         
-        self.view.addSubview(label)
-        
-        label.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
-            make.leading.equalToSuperview().offset(10)
-            make.trailing.equalToSuperview().inset(10)
+        //read object from selected Types table
+        let persons = realm.objects(RealmExampleModel.self)
+        for data in persons {
+            print(data)
         }
+        
+//        realmObject.deleteSelectedTypeTable(selectedType: RealmExampleModel.self)
+
+
+//        let data = "{\"name\": \"San Francisco\", \"cityId\": 123}".data(using: .utf8)!
+//        let realm = try! Realm()
+//
+//        // Insert from Data containing JSON
+//        try! realm.write {
+//            let json = try! JSONSerialization.jsonObject(with: data, options: [])
+//            realm.create(City.self, value: json, update: .modified)
+//        }
+        
+//        // Loop through the first 5 Dog objects
+//        // restricting the number of objects read from disk
+//        let dogs = try! Realm().objects(Dog.self)
+//        for i in 0..<5 {
+//            let dog = dogs[i]
+//            // ...
+//        }
+        
+        
+
+        
+//        label.numberOfLines = 0
+//        label.text = "language".localized()
+//
+//
+//        self.view.addSubview(label)
+//
+//        label.snp.makeConstraints { (make) in
+//            make.center.equalToSuperview()
+//            make.leading.equalToSuperview().offset(10)
+//            make.trailing.equalToSuperview().inset(10)
+//        }
         
 //        service.getData().done { (response) in
 //            print("ferhan sonuc \(response[0])")
 //        }.catch { (err) in
 //            print("error test")
 //        }
-        
-        service.postData().done { (res) in
-            print("post resfer \(res)")
-        }.catch { (err) in
-            print("post resfer catch \(err)")
-        }
+//
+//        service.postData().done { (res) in
+//            print("post resfer \(res)")
+//        }.catch { (err) in
+//            print("post resfer catch \(err)")
+//        }
         
 //        firstly {
 //            service.getData()
