@@ -6,6 +6,12 @@
   
 */
 
+// AlertView
+
+"AlertView.alertTitle" = "OOOPS";
+"AlertView.okButton" = "OK";
+"AlertView.retryButton" = "Retry";
+
 // AuthViewController
 
 "AuthViewController.ForgotCollectionViewCell.title" = "We will send you a mail to reset your password";

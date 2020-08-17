@@ -6,6 +6,12 @@
   
 */
 
+// AlertView
+
+"AlertView.alertTitle" = "OOOPS";
+"AlertView.okButton" = "Tamam";
+"AlertView.retryButton" = "Tekrar Dene";
+
 // AuthViewController
 
 "AuthViewController.ForgotCollectionViewCell.title" = "Şifrenizi yenileme talebi gönderdiğinizde size mail göndereceğiz.";
