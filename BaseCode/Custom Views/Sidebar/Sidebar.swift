@@ -21,6 +21,11 @@ class Sidebar: UIView {
     
     let menuList: [String] = ["Profile","Settings","Sign Out"]
     
+    let menuLocalizedList: [String] = ["Sidebar.profile".localized(),
+                              "Sidebar.settings".localized(),
+                              "Sidebar.signOut".localized()]
+
+    
     var darkBackgroundView: UIView?
     let stack = UIStackView()
     
@@ -94,7 +99,7 @@ extension Sidebar {
         stack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
         stack.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
         stack.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        stack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
+        stack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30).isActive = true
     }
 }
 
@@ -115,17 +120,18 @@ extension Sidebar: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let selectedTitle = menuList[indexPath.row]
+        let selectedTitleImage = menuList[indexPath.row]
+        let selectedTitle = menuLocalizedList[indexPath.row]
         
         switch indexPath.row {
         case 0:
             let cell =  tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCellNames.Sidebar.sidebarTitleCell, for: indexPath) as! SidebarTitleCell
-            cell.imageView?.image = UIImage(named: selectedTitle)
+            cell.imageView?.image = UIImage(named: selectedTitleImage)
             cell.textLabel?.text = selectedTitle
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCellNames.Sidebar.sidebarSubCell, for: indexPath)
-            cell.imageView?.image = UIImage(named: selectedTitle)
+            cell.imageView?.image = UIImage(named: selectedTitleImage)
             cell.textLabel?.text = selectedTitle
             return cell
         }

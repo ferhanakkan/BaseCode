@@ -40,7 +40,13 @@ struct Constants {
     }
     
     struct SettingViewController {
+        struct EditLanguageViewController {
+            static let editlanguageTableViewCell = "EditLanguageTableViewCell"
+        }
+        
         static let settingsTableViewCell = "SettingsTableViewCell"
+        
     }
+    
     
 }

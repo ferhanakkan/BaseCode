@@ -13,7 +13,7 @@ class EditLanguageViewController: UIViewController {
         let tableView = UITableView()
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.backgroundColor = .white
-        tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: Constants.SettingViewController.settingsTableViewCell)
+        tableView.register(EditLanguageTableViewCell.self, forCellReuseIdentifier: Constants.SettingViewController.EditLanguageViewController.editlanguageTableViewCell)
         return tableView
     }()
     
@@ -53,7 +53,7 @@ extension EditLanguageViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.SettingViewController.settingsTableViewCell, for: indexPath) as! SettingsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.SettingViewController.EditLanguageViewController.editlanguageTableViewCell, for: indexPath) as! EditLanguageTableViewCell
         let cellTitle: String = editLanguageViewModel.languageArray[indexPath.row]
         cell.label.text = cellTitle
         if !editLanguageViewModel.checkCurrentLanguage(index: indexPath.row) {
@@ -79,9 +79,9 @@ extension EditLanguageViewController: UITableViewDelegate, UITableViewDataSource
         let selectedCell: String = editLanguageViewModel.languageArray[indexPath.row]
         
         switch selectedCell {
-        case "English":
+        case "EditLanguageViewController.EditLanguageViewModel.english".localized():
             AppManager.shared.setLanguage(language: .english)
-        case "Turkish":
+        case "EditLanguageViewController.EditLanguageViewModel.turkish".localized():
             AppManager.shared.setLanguage(language: .turkish)
         default:
             print("default")

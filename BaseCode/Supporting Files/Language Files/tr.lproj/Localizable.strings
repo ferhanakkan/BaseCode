@@ -27,6 +27,26 @@
 "AuthViewController.LogInColletionViewCell.register" = "Kayıt";
 "AuthViewController.LogInColletionViewCell.remember" = "Beni Hatırla";
 
+// EditLanguageViewController
+"EditLanguageViewController.EditLanguageViewModel.english" = "İngilizce";
+"EditLanguageViewController.EditLanguageViewModel.turkish" = "Türkçe";
+
+// SettingsViewController
+"AuthViewController.SettingsViewModel.editProfile" = "Profili Düzenle";
+"AuthViewController.SettingsViewModel.editLanguage" = "Dili Düzenle";
+"AuthViewController.SettingsViewModel.english" = "İngilizce";
+"AuthViewController.SettingsViewModel.turkish" = "Türkçe";
+
+// Sidebar
+
+"Sidebar.profile" = "Profil";
+"Sidebar.settings" = "Ayarlar";
+"Sidebar.signOut" = "Çıkış Yap";
+
+// Tabbar
+"Tabbar.example" = "Ornek";
+"Tabbar.auth" = "Kayit";
+"Tabbar.settings" = "Ayarlar";
 
 //UserAgreementViewController
 

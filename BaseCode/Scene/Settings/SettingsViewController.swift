@@ -76,7 +76,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         let selectedCell: String = settingsViewModel.settingsTitles[indexPath.section][indexPath.row]
         
         switch selectedCell {
-        case "Edit Language":
+        case "AuthViewController.SettingsViewModel.editLanguage".localized():
             let vc = EditLanguageViewController()
             navigationController?.show(vc, sender: nil)
         default:

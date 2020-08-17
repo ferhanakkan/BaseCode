@@ -28,15 +28,15 @@ class Tabbar {
         
         tabController.tabBar.items?[0].image = UIImage(named: "success")
         tabController.tabBar.items![0].selectedImage = UIImage(named: "success")
-        tabController.tabBar.items![0].title = "Example"
+        tabController.tabBar.items![0].title = "Tabbar.example".localized()
         
         tabController.tabBar.items?[1].image = UIImage(named: "success")
         tabController.tabBar.items![1].selectedImage = UIImage(named: "success")
-        tabController.tabBar.items![1].title = "Auth"
+        tabController.tabBar.items![1].title = "Tabbar.auth".localized()
         
         tabController.tabBar.items?[2].image = UIImage(named: "success")
         tabController.tabBar.items![2].selectedImage = UIImage(named: "success")
-        tabController.tabBar.items![2].title = "Settings"
+        tabController.tabBar.items![2].title = "Tabbar.settings".localized()
 
         return tabController
     }

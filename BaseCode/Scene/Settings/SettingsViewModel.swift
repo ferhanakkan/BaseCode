@@ -9,5 +9,5 @@ import Foundation
 
 class SettingsViewModel {
     
-    let settingsTitles: [[String]] = [["Edit Profile"],["Edit Language"]]
+    let settingsTitles: [[String]] = [["AuthViewController.SettingsViewModel.editProfile".localized()],["AuthViewController.SettingsViewModel.editLanguage".localized()]]
 }

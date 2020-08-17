@@ -9,7 +9,7 @@ import Foundation
 
 class EditLanguageViewModel {
     
-    let languageArray = ["English","Turkish"]
+    let languageArray = ["EditLanguageViewController.EditLanguageViewModel.english".localized(),"EditLanguageViewController.EditLanguageViewModel.turkish".localized()]
     
     func checkCurrentLanguage(index: Int) -> Bool {
         let currentLang = AppManager.shared.getLanguage()

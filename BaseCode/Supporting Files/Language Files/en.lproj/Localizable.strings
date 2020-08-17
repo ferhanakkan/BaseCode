@@ -28,6 +28,28 @@
 "AuthViewController.LogInColletionViewCell.register" = "Register";
 "AuthViewController.LogInColletionViewCell.remember" = "Remember Me";
 
+// EditLanguageViewController
+"EditLanguageViewController.EditLanguageViewModel.english" = "English";
+"EditLanguageViewController.EditLanguageViewModel.turkish" = "Turkish";
+
+// SettingsViewController
+"AuthViewController.SettingsViewModel.editProfile" = "Edit Profile";
+"AuthViewController.SettingsViewModel.editLanguage" = "Language Profile";
+"AuthViewController.SettingsViewModel.english" = "English";
+"AuthViewController.SettingsViewModel.turkish" = "Turkish";
+
+// Sidebar
+
+"Sidebar.profile" = "Profile";
+"Sidebar.settings" = "Settings";
+"Sidebar.signOut" = "Sign Out";
+
+// Tabbar
+
+"Tabbar.example" = "Example";
+"Tabbar.auth" = "Auth";
+"Tabbar.settings" = "Settings";
+
 //UserAgreementViewController
 
 "UserAgreementViewController.done" = "Done";
