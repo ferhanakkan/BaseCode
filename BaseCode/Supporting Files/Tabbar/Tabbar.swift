@@ -12,7 +12,7 @@ class Tabbar {
         
         let tabController = UITabBarController()
         
-        let navigationArray = [UINavigationController(rootViewController: ExampleViewController()), UINavigationController(rootViewController: AuthViewController())]
+        let navigationArray = [UINavigationController(rootViewController: ExampleViewController()), UINavigationController(rootViewController: AuthViewController()), UINavigationController(rootViewController: SettingsViewController())]
         
         for index in 0 ..< navigationArray.count {
             navigationArray[index].navigationBar.barTintColor = .darkGray
@@ -33,6 +33,10 @@ class Tabbar {
         tabController.tabBar.items?[1].image = UIImage(named: "success")
         tabController.tabBar.items![1].selectedImage = UIImage(named: "success")
         tabController.tabBar.items![1].title = "Auth"
+        
+        tabController.tabBar.items?[2].image = UIImage(named: "success")
+        tabController.tabBar.items![2].selectedImage = UIImage(named: "success")
+        tabController.tabBar.items![2].title = "Settings"
 
         return tabController
     }

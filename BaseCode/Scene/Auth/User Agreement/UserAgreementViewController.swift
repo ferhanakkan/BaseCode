@@ -22,7 +22,6 @@ class UserAgreementViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "User Agreements"
         setUI()
     }
 }
@@ -36,7 +35,7 @@ extension UserAgreementViewController: UIScrollViewDelegate {
         scrollView.backgroundColor = .white
         scrollView.maximumZoomScale = 4
         scrollView.minimumZoomScale = 1
-        scrollView.delegate = self
+//        scrollView.delegate = self
         scrollView.contentSize = contentViewSize
         label.numberOfLines = 0
         

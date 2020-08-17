@@ -28,7 +28,6 @@ class AppManager {
         } else {
             let supportedLang = ["en","tr"]
             let currentDeviceLang = Locale.current.languageCode
-            print(currentDeviceLang)
             if supportedLang.contains(currentDeviceLang!) {
                 setLanguage(language: currentDeviceLang!)
             } else {
@@ -41,12 +40,18 @@ class AppManager {
         UserDefaults.standard.setValue(language.rawValue, forKey: "lang")
         let path = Bundle.main.path(forResource: language.rawValue, ofType: "lproj")
         self.bundle = Bundle(path: path!)!
+        let _ = RootSelector()
     }
     
     func setLanguage(language: String) {
         UserDefaults.standard.setValue(language, forKey: "lang")
         let path = Bundle.main.path(forResource: language, ofType: "lproj")
         self.bundle = Bundle(path: path!)!
+        let _ = RootSelector()
+    }
+    
+    func getLanguage() -> String {
+        return UserDefaults.standard.string(forKey: "lang")!
     }
     
     

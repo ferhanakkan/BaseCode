@@ -39,4 +39,8 @@ struct Constants {
             static let forgotCollectionViewCell = "ForgotColletionViewCell"
     }
     
+    struct SettingViewController {
+        static let settingsTableViewCell = "SettingsTableViewCell"
+    }
+    
 }
