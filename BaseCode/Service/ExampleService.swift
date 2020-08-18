@@ -31,6 +31,19 @@ class ExampleService {
         return service.get(url: "user")
     }
     
+    func deleteById(parameter: UserModelForVaporTest) -> Promise<UserModelForVaporTest> {
+        return service.delete(url: "user/\(parameter.id!)")
+    }
+    
+    func getById(param: UserModelForVaporTest) -> Promise<[UserModelForVaporTest]> {
+        return service.get(url: "user/\(param.id!)")
+    }
+    
+    func getByName(param: String) -> Promise<UserModelForVaporTest> {
+        let parameter = ["name": param]
+        return service.get(url: "user/nameFilter", parameters: parameter)
+    }
+    
 //    func getById() -> Promise<UserModelForVaporTest> {
 //
 //    }

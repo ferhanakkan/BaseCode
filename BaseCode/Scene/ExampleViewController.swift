@@ -28,12 +28,34 @@ class ExampleViewController: UIViewController {
 //            print(err)
 //        }
         
-        service.getAll().done { (response) in
-            print("ferhan \(response)")
-        }.catch { (err) in
-            print(err)
+        firstly {
+            service.getAll()
+        }.then { (response) in
+            self.service.getById(param: response[0])
+        }.done { response in
+            print(response)
         }
+//        service.getAll().done { (response) in
+//            print("ferhan \(response)")
+//        }.catch { (err) in
+//            print(err)
+//        }
         
+//        firstly {
+//            service.getAll()
+//        }.then { (userArray) in
+//            self.service.deleteById(parameter: userArray[0])
+//        }.done { (response) in
+//            print("ferhan \(response)")
+//        }.catch { (err) in
+//            print("ferhan\(err)")
+//        }
+        
+//        service.getByName(param: "ferhan ios").done { (res) in
+//            print("ferhan \(res)")
+//        }
+        
+//        C41A7709-FADC-4F43-8F69-2A37A83B648A
 
         
 //        label.numberOfLines = 0
