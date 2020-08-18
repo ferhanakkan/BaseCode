@@ -40,10 +40,18 @@ class CoreService {
     //MARK: - Request
     
     @discardableResult
-    public func request<T:Decodable>(fullUrl url: String,method: HTTPMethod, parameters: Parameters?, encoding: URLEncoding) -> Promise<T> {
+    public func request<T:Decodable>(fullUrl url: String,method: HTTPMethod, parameters: Parameters?) -> Promise<T> {
         
+        var encodinga: ParameterEncoding? = nil
+        if(method != .get) {
+            encodinga = JSONEncoding.default
+        } else {
+            encodinga = URLEncoding.queryString
+        }
+      
+                
         return Promise<T> { seal in
-            sessionManager!.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers())
+            sessionManager!.request(url, method: method, parameters: parameters, encoding: encodinga!, headers: headers())
                 .validate(statusCode: 200..<300)
                 .responseDecodable { (response: DataResponse<T, AFError>) in
                     if response.data != nil {
@@ -94,32 +102,32 @@ class CoreService {
     
     func getPagination<T:Decodable>(url: String, page: Int = 0, size: Int = 20) -> Promise<T> {
         endPoint = baseApiUrl+url
-        return self.request(fullUrl: endPoint, method: .get, parameters: ["page":page, "size": size], encoding: .queryString)
+        return self.request(fullUrl: endPoint, method: .get, parameters: ["page":page, "size": size])
     }
     
     func get<T: Decodable>(url: String, parameters : [String:Any]? = nil) -> Promise<T> {
         endPoint = baseApiUrl+url
-        return self.request(fullUrl: endPoint , method: HTTPMethod.get , parameters : parameters, encoding: .queryString)
+        return self.request(fullUrl: endPoint , method: HTTPMethod.get , parameters : parameters)
     }
     
     func post<T: Decodable>(url: String, parameters: Parameters?) -> Promise<T>  {
         endPoint = baseApiUrl+url
-        return self.request(fullUrl: endPoint , method: HTTPMethod.post , parameters : parameters, encoding: .httpBody)
+        return self.request(fullUrl: endPoint , method: HTTPMethod.post , parameters : parameters)
     }
     
     func put<T: Decodable>(url: String, parameters: Parameters) -> Promise<T> {
         endPoint = baseApiUrl+url
-        return self.request(fullUrl: endPoint , method: HTTPMethod.put , parameters : parameters, encoding: .httpBody)
+        return self.request(fullUrl: endPoint , method: HTTPMethod.put , parameters : parameters)
     }
     
     func patch<T: Decodable>(url: String, parameters: Parameters) -> Promise<T> {
         endPoint = baseApiUrl+url
-        return self.request(fullUrl: endPoint , method: HTTPMethod.patch , parameters : parameters, encoding: .httpBody)
+        return self.request(fullUrl: endPoint , method: HTTPMethod.patch , parameters : parameters)
     }
     
     func delete<T: Decodable>(url: String, parameters: Parameters? = nil) -> Promise<T> {
         endPoint = baseApiUrl+url
-        return self.request(fullUrl: endPoint , method: HTTPMethod.delete , parameters : parameters, encoding: .httpBody)
+        return self.request(fullUrl: endPoint , method: HTTPMethod.delete , parameters : parameters)
     }
 }
 

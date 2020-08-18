@@ -11,18 +11,42 @@ class ExampleService {
     
     let service = CoreService()
     
-    func getData() -> Promise<[TestModel]> {
-        service.get(url: "/comments", parameters: ["postId": 1])
+//    func getData() -> Promise<[TestModel]> {
+//        service.get(url: "/comments", parameters: ["postId": 1])
+//    }
+//
+//    func postData() -> Promise<TestModelPost> {
+//        let test: [String:Any] = ["userId": 1,
+//                                  "title": "ferhan",
+//                                  "body": "test"]
+//        return service.post(url: "/posts", parameters: test)
+//    }
+    
+    func postUser(parameter: UserModelForVaporTest) -> Promise<UserModelForVaporTest> {
+        let param = parameter.dictionary
+        return service.post(url: "user", parameters: param)
     }
     
-    func postData() -> Promise<TestModelPost> {
-        let test: [String:Any] = ["userId": 1,
-                                  "title": "ferhan",
-                                  "body": "test"]
-        return service.post(url: "/posts", parameters: test)
+    func getAll() -> Promise<[UserModelForVaporTest]> {
+        return service.get(url: "user")
     }
+    
+//    func getById() -> Promise<UserModelForVaporTest> {
+//
+//    }
     
 }
+
+//// Encode
+//let dog = Dog(name: "Rex", owner: "Etgar")
+//
+//let jsonEncoder = JSONEncoder()
+//let jsonData = try jsonEncoder.encode(dog)
+//let json = String(data: jsonData, encoding: String.Encoding.utf16)
+//
+//// Decode
+//let jsonDecoder = JSONDecoder()
+//let secondDog = try jsonDecoder.decode(Dog.self, from: jsonData)
 
 struct TestModelPost: Codable {
     var id: Int?

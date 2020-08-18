@@ -21,6 +21,18 @@ class ExampleViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .orange
         
+//        let user = UserModelForVaporTest(name: "ferhan ios", surname: "akkanios", age: 22)
+//        service.postUser(parameter: user).done { (response) in
+//            print("ferhan \(response)")
+//        }.catch { (err) in
+//            print(err)
+//        }
+        
+        service.getAll().done { (response) in
+            print("ferhan \(response)")
+        }.catch { (err) in
+            print(err)
+        }
         
 
         
