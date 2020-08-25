@@ -213,7 +213,8 @@ PODS:
     - abseil/base/config
     - abseil/meta/type_traits
   - Alamofire (5.0.0-rc.2)
-  - AuthTextField (0.2.1)
+  - AuthTextField (0.2.4):
+    - SnapKit (~> 4.0)
   - BEMCheckBox (1.4.1)
   - BoringSSL-GRPC (0.0.7):
     - BoringSSL-GRPC/Implementation (= 0.0.7)
@@ -391,19 +392,19 @@ PODS:
   - PromiseKit/UIKit (6.13.1):
     - PromiseKit/CorePromise
   - PromisesObjC (1.2.10)
-  - Protobuf (3.12.0)
-  - Realm (5.3.3):
-    - Realm/Headers (= 5.3.3)
-  - Realm/Headers (5.3.3)
-  - RealmSwift (5.3.3):
-    - Realm (= 5.3.3)
+  - Protobuf (3.13.0)
+  - Realm (5.3.5):
+    - Realm/Headers (= 5.3.5)
+  - Realm/Headers (5.3.5)
+  - RealmSwift (5.3.5):
+    - Realm (= 5.3.5)
   - SkeletonView (1.8.7)
-  - SnapKit (5.0.1)
+  - SnapKit (4.2.0)
   - SwiftyGif (5.3.0)
 
 DEPENDENCIES:
   - Alamofire (= 5.0.0-rc.2)
-  - AuthTextField
+  - AuthTextField (= 0.2.4)
   - BEMCheckBox
   - Firebase/Analytics
   - Firebase/Auth
@@ -419,7 +420,6 @@ DEPENDENCIES:
   - PromiseKit (~> 6.8)
   - RealmSwift
   - SkeletonView
-  - SnapKit (= 5.0.1)
   - SwiftyGif
 
 SPEC REPOS:
@@ -465,7 +465,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
-  AuthTextField: b83585d0535f5c4ed3d94906c298f96c7f6985bd
+  AuthTextField: 5d79517733e0df4b5e1eed8aa106ed0b74a1ae78
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   Firebase: 210f41ca352067d83b1ba4fd2e7fb49a0c017397
@@ -494,13 +494,13 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: 738e843cb8924e9e4fc3e559d0728031624bf860
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
-  Protobuf: 2793fcd0622a00b546c60e7cbbcc493e043e9bb9
-  Realm: 2d57ea355bf8ca2a0964d6bfb38d28d7ff2addf6
-  RealmSwift: 0a709536ecea30eea1d3c514f6ade2ed078dee3c
+  Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
+  Realm: 2b52fcc86fc0ed3d75a56ac0eb1e73c4f1a60e16
+  RealmSwift: a6ea2ea561039fc3833c08dec81371a9a3bb5ca6
   SkeletonView: ba5370f41280b2f0a76918bb143c1294232bb4f4
-  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwiftyGif: e466e86c660d343357ab944a819a101c4127cb40
 
-PODFILE CHECKSUM: 76994a3684df3b632891002d4d1f4e05a48f5152
+PODFILE CHECKSUM: bfaa13e62da964ba4b05e403a0bad6afd48984b5
 
 COCOAPODS: 1.9.3

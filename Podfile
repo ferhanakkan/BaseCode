@@ -8,7 +8,6 @@ target 'BaseCode' do
    pod 'Alamofire', '5.0.0-rc.2'
    pod 'IQKeyboardManagerSwift', '6.5.0'
    pod 'Kingfisher', '5.8.1'
-   pod 'SnapKit', '5.0.1'
    pod 'Firebase/Analytics'
    pod 'Firebase/Auth'
    pod 'Firebase/Core'
@@ -19,7 +18,7 @@ target 'BaseCode' do
    pod 'NVActivityIndicatorView'
    pod 'Firebase/Crashlytics'
    pod 'BEMCheckBox'
-   pod 'AuthTextField'
+   pod 'AuthTextField', '0.2.4'
    pod "SkeletonView"
    pod 'SwiftyGif'
 

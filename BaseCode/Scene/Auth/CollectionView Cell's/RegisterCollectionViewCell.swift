@@ -67,7 +67,7 @@ extension RegisterColletionViewCell {
     private func setEmailInput() {
         mainView.addSubview(emailInput)
         emailInput.inputType = .email
-//        emailInput.setLabelText()
+        emailInput.setLabelText("AuthViewController.RegisterCollectionViewCell.emailTitle".localized())
         emailInput.snp.makeConstraints { (make) in
             make.height.equalTo(40)
             make.top.leading.equalToSuperview().offset(20)
@@ -78,7 +78,7 @@ extension RegisterColletionViewCell {
     private func setPasswordInput() {
         mainView.addSubview(passwordInput)
         passwordInput.inputType = .password
-        //passwordInput.setLabelText()
+        passwordInput.setLabelText("AuthViewController.RegisterCollectionViewCell.passwordTitle".localized())
         passwordInput.snp.makeConstraints { (make) in
             make.height.equalTo(40)
             make.top.equalTo(emailInput.snp.bottom).offset(20)
@@ -91,7 +91,7 @@ extension RegisterColletionViewCell {
     private func setUsernameInput() {
         mainView.addSubview(usernameInput)
         usernameInput.inputType = .username
-        // usernameInput.setLabelText
+        usernameInput.setLabelText("AuthViewController.RegisterCollectionViewCell.nameTitle".localized())
         usernameInput.snp.makeConstraints { (make) in
             make.height.equalTo(40)
             make.top.equalTo(passwordInput.snp.bottom).offset(20)

@@ -39,9 +39,8 @@ class ExampleService {
         return service.get(url: "user/\(param.id!)")
     }
     
-    func getByName(param: String) -> Promise<UserModelForVaporTest> {
-        let parameter = ["name": param]
-        return service.get(url: "user/nameFilter", parameters: parameter)
+    func getByName(param: String) -> Promise<[UserModelForVaporTest]> {
+        return service.get(url: "user/nameFilter/\(param)")
     }
     
 //    func getById() -> Promise<UserModelForVaporTest> {

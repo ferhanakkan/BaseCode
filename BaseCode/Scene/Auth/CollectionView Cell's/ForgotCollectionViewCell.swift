@@ -69,6 +69,7 @@ extension ForgotColletionViewCell {
     private func setMailInput() {
         mainView.addSubview(mailInput)
         mailInput.inputType = .email
+        mailInput.setLabelText("AuthViewController.ForgotCollectionViewCell.emailTitle".localized())
         mailInput.snp.makeConstraints { (make) in
             make.top.equalTo(title.snp.bottom).offset(20)
             make.leading.equalToSuperview().offset(20)

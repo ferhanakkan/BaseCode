@@ -18,6 +18,8 @@
 "AuthViewController.ForgotCollectionViewCell.resetPasswordButton" = "Şifreyi sıfırla";
 "AuthViewController.ForgotCollectionViewCell.bottomLabel" = "Şifrenizi hatırladınız mı ?";
 "AuthViewController.ForgotCollectionViewCell.logIn" = "Giriş Yap";
+"AuthViewController.ForgotCollectionViewCell.emailTitle" = "E-Posta";
+
 
 "AuthViewController.RegisterCollectionViewCell.userAgreementLabel" = "Hesap oluşturmak için Kullanıcı Sözleşmemizi onaylayın.";
 "AuthViewController.RegisterCollectionViewCell.userAgreement" = "Kullanıcı Sözleşmemizi";
@@ -25,6 +27,10 @@
 "AuthViewController.RegisterCollectionViewCell.logIn" = "Giriş Yap";
 "AuthViewController.RegisterCollectionViewCell.register" = "Kayıt";
 "AuthViewController.RegisterCollectionViewCell.remember" = "Beni Hatırla";
+"AuthViewController.RegisterCollectionViewCell.nameTitle" = "Kullanıcı Adı";
+"AuthViewController.RegisterCollectionViewCell.passwordTitle" = "Şifre";
+"AuthViewController.RegisterCollectionViewCell.emailTitle" = "E-Posta";
+
 
 
 "AuthViewController.LogInColletionViewCell.resetPassword" = "Şifre Yenile";
@@ -32,6 +38,8 @@
 "AuthViewController.LogInColletionViewCell.logIn" = "Giriş Yap";
 "AuthViewController.LogInColletionViewCell.register" = "Kayıt";
 "AuthViewController.LogInColletionViewCell.remember" = "Beni Hatırla";
+"AuthViewController.LogInColletionViewCell.nameTitle" = "Kullanıcı Adı";
+"AuthViewController.LogInColletionViewCell.passwordTitle" = "Şifre";
 
 // EditLanguageViewController
 "EditLanguageViewController.EditLanguageViewModel.english" = "İngilizce";

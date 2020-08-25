@@ -21,6 +21,10 @@ class ExampleViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .orange
         
+//        service.getAll().done { (all) in
+//            print(all)
+//        }
+        
 //        let user = UserModelForVaporTest(name: "ferhan ios", surname: "akkanios", age: 22)
 //        service.postUser(parameter: user).done { (response) in
 //            print("ferhan \(response)")
@@ -28,13 +32,13 @@ class ExampleViewController: UIViewController {
 //            print(err)
 //        }
         
-        firstly {
-            service.getAll()
-        }.then { (response) in
-            self.service.getById(param: response[0])
-        }.done { response in
-            print(response)
-        }
+//        firstly {
+//            service.getAll()
+//        }.then { (response) in
+//            self.service.getById(param: response[0])
+//        }.done { response in
+//            print(response)
+//        }
 //        service.getAll().done { (response) in
 //            print("ferhan \(response)")
 //        }.catch { (err) in
@@ -50,10 +54,12 @@ class ExampleViewController: UIViewController {
 //        }.catch { (err) in
 //            print("ferhan\(err)")
 //        }
-        
-//        service.getByName(param: "ferhan ios").done { (res) in
-//            print("ferhan \(res)")
-//        }
+//
+        service.getByName(param: "akkanios").done { (res) in
+            print("ferhan \(res)")
+        }.catch { (err) in
+            print("errfer \(err)")
+        }
         
 //        C41A7709-FADC-4F43-8F69-2A37A83B648A
 

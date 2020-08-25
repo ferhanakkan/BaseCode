@@ -64,6 +64,7 @@ extension LogInColletionViewCell {
     private func setEmailInput() {
         mainView.addSubview(emailInput)
         emailInput.inputType = .email
+        emailInput.setLabelText("AuthViewController.LogInColletionViewCell.nameTitle".localized())
         emailInput.snp.makeConstraints { (make) in
             make.height.equalTo(40)
             make.top.leading.equalToSuperview().offset(20)
@@ -74,6 +75,7 @@ extension LogInColletionViewCell {
     private func setPasswordInput() {
         mainView.addSubview(passwordInput)
         passwordInput.inputType = .password
+        passwordInput.setLabelText("AuthViewController.LogInColletionViewCell.passwordTitle".localized())
         passwordInput.snp.makeConstraints { (make) in
             make.height.equalTo(40)
             make.top.equalTo(emailInput.snp.bottom).offset(20)

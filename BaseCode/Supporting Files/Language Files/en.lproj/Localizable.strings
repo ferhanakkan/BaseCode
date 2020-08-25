@@ -18,6 +18,7 @@
 "AuthViewController.ForgotCollectionViewCell.resetPasswordButton" = "Reset Password";
 "AuthViewController.ForgotCollectionViewCell.bottomLabel" = "Did you remember your password?";
 "AuthViewController.ForgotCollectionViewCell.logIn" = "Log In";
+"AuthViewController.ForgotCollectionViewCell.emailTitle" = "E-mail";
 
 "AuthViewController.RegisterCollectionViewCell.userAgreementLabel" = "By creating an account, you accept our User Agreements .";
 "AuthViewController.RegisterCollectionViewCell.userAgreement" = "User Agreements";
@@ -25,6 +26,9 @@
 "AuthViewController.RegisterCollectionViewCell.logIn" = "Log In";
 "AuthViewController.RegisterCollectionViewCell.register" = "Register";
 "AuthViewController.RegisterCollectionViewCell.remember" = "Remember Me";
+"AuthViewController.RegisterCollectionViewCell.nameTitle" = "Username";
+"AuthViewController.RegisterCollectionViewCell.passwordTitle" = "Password";
+"AuthViewController.RegisterCollectionViewCell.emailTitle" = "E-mail";
 
 
 "AuthViewController.LogInColletionViewCell.resetPassword" = "Reset Password";
@@ -33,6 +37,8 @@
 "AuthViewController.LogInColletionViewCell.logIn" = "Log In";
 "AuthViewController.LogInColletionViewCell.register" = "Register";
 "AuthViewController.LogInColletionViewCell.remember" = "Remember Me";
+"AuthViewController.LogInColletionViewCell.nameTitle" = "Username";
+"AuthViewController.LogInColletionViewCell.passwordTitle" = "Password";
 
 // EditLanguageViewController
 "EditLanguageViewController.EditLanguageViewModel.english" = "English";
