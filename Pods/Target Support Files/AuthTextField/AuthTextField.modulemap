@@ -1,0 +1,6 @@
+framework module AuthTextField {
+  umbrella header "AuthTextField-umbrella.h"
+
+  export *
+  module * { export * }
+}
