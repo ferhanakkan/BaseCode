@@ -12,4 +12,9 @@ struct UserModelForVaporTest: Codable {
     var name: String?
     var surname: String?
     var age: Int?
+    
+    enum userModelKeys: String, CodingKey {
+        case id,name,surname
+        case age = "Age"
+    }
 }

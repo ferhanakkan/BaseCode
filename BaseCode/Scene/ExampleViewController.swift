@@ -103,10 +103,64 @@ class ExampleViewController: UIViewController {
         super.viewWillAppear(animated)
         
         let leftBarButton = UIBarButtonItem()
-        let button = UIButton().createBarButton(backgroundImageName: "Profile", size: 30, cornerRadius: 15, borderWidth: 2, borderColor: .orange)
+        let button = UIButton().createBarButton(backgroundImageName: "Profile", size: 40, cornerRadius: 20, borderWidth: 2, borderColor: .orange)
         button.addTarget(self, action: #selector(sidebarButtonPressed), for: .touchUpInside)
         leftBarButton.customView = button
         navigationItem.leftBarButtonItem = leftBarButton
+        
+//        let titleView = UIView()
+//        let label = UILabel()
+//        let imageView = UIImageView(image: UIImage(named: "Profile"))
+//
+//        titleView.backgroundColor = .red
+//        titleView.addSubview(label)
+//        titleView.addSubview(imageView)
+//
+//        label.center = titleView.center
+//        label.textAlignment = .center
+//        label.text = "asdasdasdasdasdasdasd"
+//        label.font = .worksansSemiBold(fontSize: 12)
+//
+//
+//        imageView.contentMode = .scaleAspectFit
+//        imageView.translatesAutoresizingMaskIntoConstraints = false
+//        imageView.topAnchor.constraint(equalTo: titleView.topAnchor).isActive = true
+//        imageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
+//        imageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
+//        imageView.centerXAnchor.constraint(equalTo: titleView.centerXAnchor).isActive = true
+//
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        label.topAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+//        label.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
+//        label.bottomAnchor.constraint(equalTo: titleView.bottomAnchor).isActive = true
+//        label.leadingAnchor.constraint(equalTo: titleView.leadingAnchor).isActive = true
+//        label.trailingAnchor.constraint(equalTo: titleView.trailingAnchor).isActive = true
+//        navigationItem.titleView = titleView
+//        titleView.widthAnchor.constraint(equalToConstant:  self.view.frame.width-20).isActive = true
+//        print("ferhan frame \(titleView.frame)")
+        
+//        let testView = UIView()
+//        testView.translatesAutoresizingMaskIntoConstraints = false
+//        testView.backgroundColor = .red
+//        let textView = UITextField()
+//        testView.addSubview(textView)
+//        textView.placeholder = "test"
+//        textView.translatesAutoresizingMaskIntoConstraints = false
+//        textView.topAnchor.constraint(equalTo: testView.topAnchor).isActive = true
+//        textView.bottomAnchor.constraint(equalTo: testView.bottomAnchor).isActive = true
+//        textView.leadingAnchor.constraint(equalTo: testView.leadingAnchor).isActive = true
+//        textView.trailingAnchor.constraint(equalTo: testView.trailingAnchor).isActive = true
+//        textView.widthAnchor.constraint(equalToConstant: 250).isActive = true
+//        textView.backgroundColor = .white
+//
+//        navigationItem.titleView = testView
+        
+//        let vieww = UIView()
+//        vieww.translatesAutoresizingMaskIntoConstraints = false
+//        vieww.backgroundColor = .red
+//        navigationItem.titleView = vieww
+        
+        
     }
     
     @objc func sidebarButtonPressed() {

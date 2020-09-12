@@ -10,6 +10,7 @@ import Foundation
 struct JSON {
     static let encoder = JSONEncoder()
 }
+
 extension Encodable {
     subscript(key: String) -> Any? {
         return dictionary[key]
