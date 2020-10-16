@@ -13,4 +13,11 @@ extension UITextField {
          attributedPlaceholder = NSAttributedString(string: text,
                                                     attributes: [NSAttributedString.Key.foregroundColor: color])
      }
+    
+    var isEmpty: Bool {
+        if let text = self.text, !text.isEmpty {
+            return false
+        }
+        return true
+    }
  }

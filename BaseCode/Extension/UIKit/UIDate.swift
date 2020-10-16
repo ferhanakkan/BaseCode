@@ -97,6 +97,11 @@ extension Date {
             return seconds == 1 ? "1 second later" : "\(seconds) seconds later"
         }
     }
-
+    
+    func dateFormatTime() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        return dateFormatter.string(from: self)
+    }
 }
 

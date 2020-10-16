@@ -10,6 +10,8 @@ import UIKit
 
 extension UIView {
     
+    static let gradientLayerName: String = "gradientLayer"
+    
     @IBInspectable var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
@@ -62,6 +64,80 @@ extension UIView {
         layer.cornerRadius = frame.height/2
         clipsToBounds = true
     }
+    
+    func rotate(degrees: CGFloat) {
+        rotate(radians: CGFloat.pi * degrees / 180.0)
+    }
+
+    func rotate(radians: CGFloat) {
+        self.transform = CGAffineTransform(rotationAngle: radians)
+    }
+    
+    
+    func setGradientBackground() {
+        
+        let firstColor = UIColor(red: 120, green: 185, blue: 48, alpha: 1)
+        let secondColor = UIColor(red: 0, green: 144, blue: 197, alpha: 1)
+        
+        let layer = CAGradientLayer()
+        layer.frame = self.frame
+        layer.colors = [firstColor.cgColor, secondColor.cgColor]
+
+        
+    }
+    
+    func addGradientLayer(colors: [UIColor], type: MKGridentEnum, estimatedFrame: CGRect? = nil) {
+            clipsToBounds = true
+            
+            if let sublayers = self.layer.sublayers {
+                for sublayer in sublayers {
+                    if sublayer.name == UIView.gradientLayerName {
+                        updateGradientLayer(estimatedFrame: estimatedFrame)
+                        return
+                    }
+                }
+            }
+            
+            let gradient = CAGradientLayer()
+            gradient.name = UIView.gradientLayerName
+            gradient.frame = estimatedFrame ?? bounds
+            gradient.colors = colors.map { $0.cgColor }
+            
+            switch type {
+            case MKGridentEnum.horizontal:
+                gradient.startPoint = CGPoint(x: 0, y: 0)
+                gradient.endPoint = CGPoint(x: 1, y: 0)
+            case MKGridentEnum.vertical:
+                gradient.startPoint = CGPoint(x: 0, y: 0)
+                gradient.endPoint = CGPoint(x: 0, y: 1)
+            }
+            
+            gradient.cornerRadius = layer.cornerRadius
+            
+            layer.insertSublayer(gradient, at: 0)
+        }
+        
+        func updateGradientLayer(estimatedFrame: CGRect? = nil) {
+            guard let sublayers = layer.sublayers else { return }
+            
+            for sublayer in sublayers {
+                if sublayer.name == UIView.gradientLayerName {
+                    sublayer.frame = estimatedFrame ?? bounds
+                    sublayer.cornerRadius = layer.cornerRadius
+                }
+            }
+        }
+        
+        func removeGradientLayer() {
+            guard let sublayers = self.layer.sublayers else { return }
+            
+            for sublayer in sublayers {
+                if sublayer.name == UIView.gradientLayerName {
+                    sublayer.removeFromSuperlayer()
+                }
+            }
+        }
+
     
 }
 

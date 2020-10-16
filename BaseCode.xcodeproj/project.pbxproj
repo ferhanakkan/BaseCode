@@ -62,6 +62,10 @@
 		3676A7EA24E28D1A0055E39A /* RegisterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676A7E224E28D1A0055E39A /* RegisterCollectionViewCell.swift */; };
 		3676A7EB24E28D1A0055E39A /* UserAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676A7E424E28D1A0055E39A /* UserAgreementViewController.swift */; };
 		3679013424E59D0800CCED0A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3679013324E59D0800CCED0A /* String.swift */; };
+		36962BAD253A0BBE001D469F /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36962BAA253A0BBE001D469F /* UIStackView.swift */; };
+		36962BAE253A0BBE001D469F /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36962BAB253A0BBE001D469F /* UITextView.swift */; };
+		36962BAF253A0BBE001D469F /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36962BAC253A0BBE001D469F /* UITableView.swift */; };
+		36962BB3253A0CD8001D469F /* MKGridentEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36962BB2253A0CD8001D469F /* MKGridentEnum.swift */; };
 		36CC857B24E6E46B006A8FCF /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CC857A24E6E46B006A8FCF /* AlertView.swift */; };
 		36DB10C724E9473900361E92 /* CoreRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB10C624E9473900361E92 /* CoreRealm.swift */; };
 		36DB10CA24E950B900361E92 /* RealmExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB10C924E950B900361E92 /* RealmExampleModel.swift */; };
@@ -128,6 +132,10 @@
 		3676A7E224E28D1A0055E39A /* RegisterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterCollectionViewCell.swift; sourceTree = "<group>"; };
 		3676A7E424E28D1A0055E39A /* UserAgreementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAgreementViewController.swift; sourceTree = "<group>"; };
 		3679013324E59D0800CCED0A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		36962BAA253A0BBE001D469F /* UIStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		36962BAB253A0BBE001D469F /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
+		36962BAC253A0BBE001D469F /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		36962BB2253A0CD8001D469F /* MKGridentEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKGridentEnum.swift; sourceTree = "<group>"; };
 		36CC857A24E6E46B006A8FCF /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		36DB10C624E9473900361E92 /* CoreRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreRealm.swift; sourceTree = "<group>"; };
 		36DB10C924E950B900361E92 /* RealmExampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExampleModel.swift; sourceTree = "<group>"; };
@@ -187,6 +195,7 @@
 		3605E3A924D2AEC3001CB361 /* BaseCode */ = {
 			isa = PBXGroup;
 			children = (
+				36962BB1253A0CD0001D469F /* Enums */,
 				36DB10C824E950AC00361E92 /* Model */,
 				36DB10C424E9471300361E92 /* Core */,
 				360326DB24E19F3A00FF3DCB /* Custom Views */,
@@ -243,6 +252,9 @@
 				360326D224E0A46600FF3DCB /* UILabel.swift */,
 				360326D424E0B53200FF3DCB /* UITapGestureRecognizer.swift */,
 				360326D624E18DB400FF3DCB /* UIFont.swift */,
+				36962BAA253A0BBE001D469F /* UIStackView.swift */,
+				36962BAC253A0BBE001D469F /* UITableView.swift */,
+				36962BAB253A0BBE001D469F /* UITextView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -461,6 +473,14 @@
 			path = "Language Files";
 			sourceTree = "<group>";
 		};
+		36962BB1253A0CD0001D469F /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				36962BB2253A0CD8001D469F /* MKGridentEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		36CC857924E6E456006A8FCF /* Alert View */ = {
 			isa = PBXGroup;
 			children = (
@@ -653,15 +673,18 @@
 				36DB10C724E9473900361E92 /* CoreRealm.swift in Sources */,
 				3676A7E824E28D1A0055E39A /* CellProtocol.swift in Sources */,
 				3605E3C124D2D262001CB361 /* AppDelegatePushNotification.swift in Sources */,
+				36962BAF253A0BBE001D469F /* UITableView.swift in Sources */,
 				3627EC0524D2D983008D76DB /* UIViewController.swift in Sources */,
 				3627EC0924D2D983008D76DB /* GMSMarker.swift in Sources */,
 				3632DC5624EAB25B008C299A /* EditLanguageTableViewCell.swift in Sources */,
 				3632DC4524EA9881008C299A /* SettingsViewController.swift in Sources */,
 				3604B6CE24EC313C00E6FBEB /* Encodable.swift in Sources */,
 				3676A7E524E28D1A0055E39A /* AuthViewController.swift in Sources */,
+				36962BAD253A0BBE001D469F /* UIStackView.swift in Sources */,
 				3627EC0624D2D983008D76DB /* UIImageView.swift in Sources */,
 				36768D2124DC726A00112893 /* ExampleViewController.swift in Sources */,
 				3632DC4F24EAABAE008C299A /* EditLanguageViewModel.swift in Sources */,
+				36962BAE253A0BBE001D469F /* UITextView.swift in Sources */,
 				360326D724E18DB400FF3DCB /* UIFont.swift in Sources */,
 				3604B6CC24EC2EAF00E6FBEB /* UserModelForVaporTest.swift in Sources */,
 				3632DC4024E9D94D008C299A /* Tabbar.swift in Sources */,
@@ -676,6 +699,7 @@
 				3632DC5424EAB1EB008C299A /* ProfileViewModel.swift in Sources */,
 				36CC857B24E6E46B006A8FCF /* AlertView.swift in Sources */,
 				36768D1824DC492600112893 /* Constants.swift in Sources */,
+				36962BB3253A0CD8001D469F /* MKGridentEnum.swift in Sources */,
 				360326D324E0A46600FF3DCB /* UILabel.swift in Sources */,
 				3627EC0224D2D983008D76DB /* UIColor.swift in Sources */,
 				360326D524E0B53300FF3DCB /* UITapGestureRecognizer.swift in Sources */,
